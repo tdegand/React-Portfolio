@@ -8,6 +8,7 @@ import {
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import NavBar from "../nav";
+import MainContent from './maincontent';
 import Footer from "../footer";
 
 const useStyles = makeStyles((theme) => ({
@@ -15,22 +16,27 @@ const useStyles = makeStyles((theme) => ({
 		marginRight: theme.spacing(2),
 	},
 	header: {
+        height: window.innerHeight,
 		backgroundColor: theme.palette.background.paper,
 		padding: theme.spacing(8, 0, 6),
 	},
 	headerButtons: {
 		marginTop: theme.spacing(4),
 	},
+    main: {
+        height: 'fitcontent'
+    }
 }));
 
 const Home = () => {
+    console.log(window.innerHeight);
 	const classes = useStyles();
 
 	return (
 		<React.Fragment>
 			<CssBaseline />
 			<NavBar />
-			<main>
+			<header>
 				{/* Hero unit */}
 				<div className={classes.header}>
 					<Container maxWidth="sm" justify="start">
@@ -41,17 +47,15 @@ const Home = () => {
 							color="textPrimary"
 							gutterBottom
 						>
-							Album layout
+                            I'm Tyler Degand
 						</Typography>
 						<Typography
-							variant="h5"
+							variant="h4"
 							align="center"
 							color="textSecondary"
 							paragraph
 						>
-							Something short and leading about the collection below—its
-							contents, the creator, etc. Make it short and sweet, but not too
-							short so folks don&apos;t simply skip over it entirely.
+							Full Stack Web Developer
 						</Typography>
 						<div className={classes.headerButtons}>
 							<Grid container spacing={2} justify="center">
@@ -64,7 +68,10 @@ const Home = () => {
 						</div>
 					</Container>
 				</div>
-			</main>
+			</header>
+            <main className={classes.main}>
+                <MainContent />
+            </main>
 			<Footer />
 		</React.Fragment>
 	);
