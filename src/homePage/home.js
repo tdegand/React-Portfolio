@@ -4,14 +4,14 @@ import {
 	CssBaseline,
 	Grid,
 	Typography,
-	Container,
 } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
 import NavBar from '../nav';
 import MainContent from './maincontent';
 import Footer from '../footer';
-import Image from '../images/repeated-square-dark.png';
+import Image from '../images/beanstalk-dark.png';
 import Headshot from '../images/Tyler.jpg';
+import scrollToProjects from '../utils/effects.js';
 
 const useStyles = makeStyles((theme) => ({
 	icon: {
@@ -32,17 +32,37 @@ const useStyles = makeStyles((theme) => ({
 	},
 	headshot: {
 		height: '100%',
-		width: '10%',
+		width: '30%',
 		borderRadius: '50px',
-		minWidth: '125px'
+		minWidth: '150px',
+		maxWidth: '250px'
 	},
 	button: {
-		borderRadius: '30%'
+		backgroundColor: '#255f37',
+		color: 'white'
+	},
+	'&:hover': {
+		backgroundColor: '#006921',
+		color: 'white',
 	},
 	text: {
 		color: 'white'
+	},
+	headerCon: {
+		height: '65%'
 	}
 }));
+
+const ColorButton = withStyles(() => ({
+	root: {
+		backgroundColor: '#255f37',
+		color: 'white',
+		'&:hover': {
+			backgroundColor: '#007725',
+			color: 'white'
+		},
+	},
+  }))(Button);
 
 const Home = () => {
 	console.log(window.innerHeight);
@@ -56,7 +76,7 @@ const Home = () => {
 				{/* Hero unit */}
 				<div className={classes.header}>
 					{/* <Container maxWidth="sm" justify="start"> */}
-						<Grid direction='row' container={true} justify='center' alignContent='space-between'>
+						<Grid container={true} justify='center' alignContent='space-between' className={classes.headerCon}>
 							<Grid container={true} justify='center'>
 								<img className={classes.headshot} src={Headshot} alt="Italian Trulli"></img>
 							</Grid>
@@ -83,9 +103,9 @@ const Home = () => {
 								<div className={classes.headerButtons}>
 									<Grid container spacing={2} justify="center">
 										<Grid item>
-											<Button variant="contained" color="primary" size='large'>
+											<ColorButton variant="contained" color="initial" size='large' onClick={scrollToProjects}>
 												My Work
-											</Button>
+											</ColorButton>
 										</Grid>
 									</Grid>
 								</div>

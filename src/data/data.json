@@ -1,0 +1,208 @@
+{
+    "projects": [
+        {
+            "id": "1",
+            "project_name": "Full Stack Course App",
+            "description": "An application where you can create an account to then create and manage courses.",
+            "technologies": [
+                "Node.js",
+                "Express",
+                "React",
+                "Sequelize",
+                "MySQL"
+            ],
+            "live_link": "https://elated-noether-7d2f5e.netlify.app/",
+            "github_link": "https://github.com/tdegand/fullstack-app",
+            "image_urls": [
+                "images/full-stack-square.jpg",
+                "images/full-stack1.jpg",
+                "images/full-stack2.jpg"
+            ],
+            "alt": [
+                "Courses",
+                "Courses sign up",
+                "Create a course"
+            ]
+        },
+        {
+            "id": "2",
+            "project_name": "SQL Library Manager",
+            "description": "A Library app that allows you to create, delete and update a book database",
+            "technologies": [
+                "Node.js",
+                "Express",
+                "Pug",
+                "Sequelize",
+                "sqlite"
+            ],
+            "live_link": "https://enigmatic-crag-54349.herokuapp.com/",
+            "github_link": "https://github.com/tdegand/sql-library-manager",
+            "image_urls": [
+                "images/sql-square.jpg",
+                "images/sql-2.jpg",
+                "images/sql-1.jpg"
+            ],
+            "alt": [
+                "Library list",
+                "Library showcase 1",
+                "Library showcase 2"
+            ]
+        },
+        {
+            "id": "3",
+            "project_name": "React Gallery App",
+            "description": "A gallery app created using the Flickr API.",
+            "technologies": [
+                "React",
+                "Node.js",
+                "API's"
+            ],
+            "live_link": "https://trusting-rosalind-022091.netlify.app/",
+            "github_link": "https://github.com/tdegand/react-gallery",
+            "image_urls": [
+                "images/react-square.jpg",
+                "images/react-2.jpg",
+                "images/react-3.jpg"
+            ],
+            "alt": [
+                "React Gallery",
+                "React Gallery showcase 1",
+                "React Gallery showcase 2"
+            ]
+        },
+        {
+            "id": "4",
+            "project_name": "Public API request",
+            "description": "An employee directory built using a public API that generates random users.",
+            "technologies": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "AJAX",
+                "API's"
+            ],
+            "live_link": "https://tdegand.github.io/public_api_requests/",
+            "github_link": "https://github.com/tdegand/public_api_requests",
+            "image_urls": [
+                "images/apirequests-square.jpg",
+                "images/apirequests-1.jpg",
+                "images/apirequests-2.jpg"
+            ],
+            "alt": [
+                "Public API request",
+                "Public API request showcase 1",
+                "Public API request showcase 2"
+            ]
+        },
+        {
+            "id": "5",
+            "project_name": "Gameshow app",
+            "description": "A phrase game built using Object Orientated JavaScript.",
+            "technologies": [
+                "HTML",
+                "CSS",
+                "Object Orientated JavaScript"
+            ],
+            "live_link": "https://tdegand.github.io/gameshow-app/",
+            "github_link": "https://github.com/tdegand/gameshow-app",
+            "image_urls": [
+                "images/phrase-square.jpg",
+                "images/phrase-1.jpg",
+                "images/phrase-2.jpg"
+            ],
+            "alt": [
+                "Gameshow app",
+                "Gameshow app showcase 1",
+                "Gameshow app showcase 2"
+            ]
+        },
+        {
+            "id": "6",
+            "project_name": "Interactive Form",
+            "description": "Dynamically shows or hides fields based on user input. Also adds validation to each form to prevent users from submitting with wrong or no data",
+            "technologies": [
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ],
+            "live_link": "https://tdegand.github.io/Interactive-form/",
+            "github_link": "https://github.com/tdegand/Interactive-form",
+            "image_urls": [
+                "images/forms-square.jpg",
+                "images/forms-1.jpg",
+                "images/forms-2.jpg"
+            ],
+            "alt": [
+                "Interactive Form",
+                "Interactive Form showcase 1",
+                "Interactive Form showcase 2"
+            ]
+        },
+        {
+            "id": "7",
+            "project_name": "Tip Calculator",
+            "description": "An application used to find the tip of amounts up to 1 million dollars and use any percentage.You can Also split the tip between up to 50 friends",
+            "technologies": [
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ],
+            "live_link": "https://tdegand.github.io/Tip-Calculator",
+            "github_link": "https://github.com/tdegand/Tip-Calculator",
+            "image_urls": [ 
+                "images/tip-calc-square.jpg",
+                "images/tip-calc-2.jpg",
+                "images/tip-calc-3.jpg"
+            ],
+            "alt": [
+                "Tip Calculator",
+                "Tip Calculator showcase 1",
+                "Tip Calculator showcase 2"
+            ]
+        },
+        {
+            "id": "8",
+            "project_name": "List Pagination and Filtering",
+            "description": "Filters through a large list of users and dynamically creates pagination links",
+            "technologies": [
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ],
+            "live_link": "https://tdegand.github.io/list-pagination-and-filtering/",
+            "github_link": "https://github.com/tdegand/list-pagination-and-filtering",
+            "image_urls": [
+                "images/pagination-square.jpg",
+                "images/pagination-1.jpg",
+                "images/pagination-2.jpg"
+            ],
+            "alt": [
+                "List Pagination and Filtering",
+                "List Pagination and Filtering showcase 1",
+                "List Pagination and Filtering showcase 2"
+            ]
+        },
+        {
+            "id": "9",
+            "project_name": "Random Quote Generator",
+            "description": "Displays random quotes on the page and using Javascript",
+            "technologies": [
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ],
+            "live_link": "https://tdegand.github.io/Random-Quote-Generator/",
+            "github_link": "https://github.com/tdegand/Random-Quote-Generator",
+            "image_urls": [
+                "images/randomquote-square.jpg",
+                "images/randomquote-1.jpg",
+                "images/randomquote-2.jpg"
+            ],
+            "alt": [
+                "Random Quote Generator",
+                "Random Quote Generator showcase 1",
+                "Random Quote Generator showcase 2"
+            ]
+        }
+    ]
+}
