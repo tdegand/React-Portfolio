@@ -27,8 +27,8 @@ const useStyles = makeStyles((theme) => ({
 	expandOpen: {
 		transform: 'rotate(180deg)',
 	},
-	card: {
-		maxWidth: 345,
+	cardCon: {
+		width: '100%',
 	}
 }));
 
@@ -38,13 +38,13 @@ const MainContent = () => {
 
 	React.useEffect(() => {
 		setData(Data.projects);
-	  });
+	}, []);
 
 	
 	console.log(data);
 	return (
 		<Container fixed>
-			<Grid container direction="row" justify="center" alignItems="center">
+			<Grid container className={classes.cardCon} direction="row" justify="center" alignContent="center">
 				{_.map(data, project => {
 						return <ProjectCards key={project.id} project={project}/>
 				})}

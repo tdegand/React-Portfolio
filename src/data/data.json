@@ -14,9 +14,9 @@
             "live_link": "https://elated-noether-7d2f5e.netlify.app/",
             "github_link": "https://github.com/tdegand/fullstack-app",
             "image_urls": [
-                "../images/full-stack-square.jpg",
-                "../images/full-stack1.jpg",
-                "../images/full-stack2.jpg"
+                "full-stack-square",
+                "full-stack1",
+                "full-stack2"
             ],
             "alt": [
                 "Courses",
@@ -38,9 +38,9 @@
             "live_link": "https://enigmatic-crag-54349.herokuapp.com/",
             "github_link": "https://github.com/tdegand/sql-library-manager",
             "image_urls": [
-                "../images/sql-square.jpg",
-                "../images/sql-2.jpg",
-                "../images/sql-1.jpg"
+                "sql-square",
+                "sql-2",
+                "sql-1"
             ],
             "alt": [
                 "Library list",
@@ -60,9 +60,9 @@
             "live_link": "https://trusting-rosalind-022091.netlify.app/",
             "github_link": "https://github.com/tdegand/react-gallery",
             "image_urls": [
-                "../images/react-square.jpg",
-                "../images/react-2.jpg",
-                "../images/react-3.jpg"
+                "react-square",
+                "react-2",
+                "react-3"
             ],
             "alt": [
                 "React Gallery",
@@ -84,9 +84,9 @@
             "live_link": "https://tdegand.github.io/public_api_requests/",
             "github_link": "https://github.com/tdegand/public_api_requests",
             "image_urls": [
-                "../images/apirequests-square.jpg",
-                "../images/apirequests-1.jpg",
-                "../images/apirequests-2.jpg"
+                "apirequests-square",
+                "apirequests-1",
+                "apirequests-2"
             ],
             "alt": [
                 "Public API request",
@@ -106,9 +106,9 @@
             "live_link": "https://tdegand.github.io/gameshow-app/",
             "github_link": "https://github.com/tdegand/gameshow-app",
             "image_urls": [
-                "../images/phrase-square.jpg",
-                "../images/phrase-1.jpg",
-                "../images/phrase-2.jpg"
+                "phrase-square",
+                "phrase-1",
+                "phrase-2"
             ],
             "alt": [
                 "Gameshow app",
@@ -128,9 +128,9 @@
             "live_link": "https://tdegand.github.io/Interactive-form/",
             "github_link": "https://github.com/tdegand/Interactive-form",
             "image_urls": [
-                "../images/forms-square.jpg",
-                "../images/forms-1.jpg",
-                "../images/forms-2.jpg"
+                "forms-square",
+                "forms-1",
+                "forms-2"
             ],
             "alt": [
                 "Interactive Form",
@@ -150,9 +150,9 @@
             "live_link": "https://tdegand.github.io/Tip-Calculator",
             "github_link": "https://github.com/tdegand/Tip-Calculator",
             "image_urls": [ 
-                "../images/tip-calc-square.jpg",
-                "../images/tip-calc-2.jpg",
-                "../images/tip-calc-3.jpg"
+                "tip-calc-square",
+                "tip-calc-2",
+                "tip-calc-3"
             ],
             "alt": [
                 "Tip Calculator",
@@ -172,9 +172,9 @@
             "live_link": "https://tdegand.github.io/list-pagination-and-filtering/",
             "github_link": "https://github.com/tdegand/list-pagination-and-filtering",
             "image_urls": [
-                "../images/pagination-square.jpg",
-                "../images/pagination-1.jpg",
-                "../images/pagination-2.jpg"
+                "pagination-square",
+                "pagination-1",
+                "pagination-2"
             ],
             "alt": [
                 "List Pagination and Filtering",
@@ -194,9 +194,9 @@
             "live_link": "https://tdegand.github.io/Random-Quote-Generator/",
             "github_link": "https://github.com/tdegand/Random-Quote-Generator",
             "image_urls": [
-                "../images/randomquote-square.jpg",
-                "../images/randomquote-1.jpg",
-                "../images/randomquote-2.jpg"
+                "randomquote-square",
+                "randomquote-1",
+                "randomquote-2"
             ],
             "alt": [
                 "Random Quote Generator",

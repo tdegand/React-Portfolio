@@ -10,8 +10,8 @@ import NavBar from '../nav';
 import MainContent from './maincontent';
 import Footer from '../footer';
 import Image from '../images/beanstalk-dark.png';
-import Headshot from '../images/Tyler.jpg';
 import scrollToProjects from '../utils/effects.js';
+import Headshot from '../images/Tyler.jpg';
 
 const useStyles = makeStyles((theme) => ({
 	icon: {
@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
 		marginTop: theme.spacing(4),
 	},
 	main: {
-		height: 'fitcontent'
+		height: 'maxContent'
 	},
 	headshot: {
 		height: '100%',
@@ -36,14 +36,6 @@ const useStyles = makeStyles((theme) => ({
 		borderRadius: '50px',
 		minWidth: '150px',
 		maxWidth: '250px'
-	},
-	button: {
-		backgroundColor: '#255f37',
-		color: 'white'
-	},
-	'&:hover': {
-		backgroundColor: '#006921',
-		color: 'white',
 	},
 	text: {
 		color: 'white'
