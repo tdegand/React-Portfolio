@@ -10,7 +10,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import NavBar from '../nav';
 import MainContent from './maincontent';
 import Footer from '../footer';
-import Image from '../images/background-art1.jpg';
+import Image from '../images/repeated-square-dark.png';
 import Headshot from '../images/Tyler.jpg';
 
 const useStyles = makeStyles((theme) => ({
@@ -20,7 +20,8 @@ const useStyles = makeStyles((theme) => ({
 	header: {
 		height: window.innerHeight,
 		backgroundImage: `url(${Image})`,
-		backgroundSize: 'cover',
+		backgroundSize: 'auto',
+		backgroundRepeat: 'repeat',
 		padding: theme.spacing(8, 0, 6),
 	},
 	headerButtons: {
@@ -31,12 +32,15 @@ const useStyles = makeStyles((theme) => ({
 	},
 	headshot: {
 		height: '100%',
-		width: '50%',
-		borderRadius: '50%',
-		marginLeft: '25%'
+		width: '10%',
+		borderRadius: '50px',
+		minWidth: '125px'
 	},
 	button: {
 		borderRadius: '30%'
+	},
+	text: {
+		color: 'white'
 	}
 }));
 
@@ -52,21 +56,23 @@ const Home = () => {
 				{/* Hero unit */}
 				<div className={classes.header}>
 					{/* <Container maxWidth="sm" justify="start"> */}
-						<Grid direction='row' container={true}>
-							<Grid item={true} justify='center'>
+						<Grid direction='row' container={true} justify='center' alignContent='space-between'>
+							<Grid container={true} justify='center'>
 								<img className={classes.headshot} src={Headshot} alt="Italian Trulli"></img>
 							</Grid>
 							<Grid item={true}>
 								<Typography
+									className={classes.text}
 									component="h1"
 									variant="h2"
 									align="center"
-									color="textPrimary"
+									color="initial"
 									gutterBottom
 								>
 									I'm Tyler Degand
 								</Typography>
 								<Typography
+									className={classes.text}
 									variant="h4"
 									align="center"
 									color="textSecondary"

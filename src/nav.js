@@ -4,13 +4,17 @@ import {
 	AppBar,
 	Toolbar,
 	Typography,
-    Link
+    Link,
+    Grid
 } from "@material-ui/core";
 
 const useStyles = makeStyles({
     navBar: {
-        backgroundColor: 'paper',
+        backgroundColor: '#255f37',
     },
+    navLink: {
+        padding: '5px'
+    }
 });
 
 const Navbar = () => {
@@ -19,10 +23,16 @@ const Navbar = () => {
     return(
         <AppBar position="static" className={classes.navBar}>
             <Toolbar>
-            <Typography variant="h6" color="inherit" noWrap>
-                TD
-            </Typography>
-            <Link color="inherit">Contact Me</Link>
+                <Grid container={true} justify='space-between'>
+                    <Grid item={true}>
+                    <Typography variant="h6" color="inherit" noWrap>
+                        TD
+                    </Typography>
+                    </Grid>
+                    <Grid item={true}>
+                        <Link className={classes.navLink} color="inherit">Contact Me</Link>
+                    </Grid>
+                </Grid>
             </Toolbar>
         </AppBar>
     );
