@@ -46,7 +46,7 @@ const MainContent = () => {
 		<Container fixed>
 			<Grid container direction="row" justify="center" alignItems="center">
 				{_.map(data, project => {
-						return <ProjectCards />
+						return <ProjectCards key={project.id} project={project}/>
 				})}
 			</Grid>
 		</Container>

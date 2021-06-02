@@ -34,8 +34,10 @@ const useStyles = makeStyles((theme) => ({
 	}
 }));
 
-const ProjectCards = () => {
+const ProjectCards = (props) => {
 	const classes = useStyles();
+    const { project } = props;
+    console.log(project.image_urls[0]);
 
 	const [expanded, setExpanded] = React.useState(false);
 
@@ -48,12 +50,11 @@ const ProjectCards = () => {
         <Grid>
             <Card className={classes.card} variant="outlined">
                 <CardHeader
-                    title="Shrimp and Chorizo Paella"
-                    subheader="September 14, 2016"
+                    title={project.project_name}
                 />
                 <CardMedia
                     className={classes.media}
-                    image="/static/images/cards/paella.jpg"
+                    image={project.image_urls[0]}
                     title="Paella dish"
                 />
                 <CardContent>

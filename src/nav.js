@@ -26,13 +26,6 @@ const useStyles = makeStyles({
 const Navbar = () => {
     const classes = useStyles();
 
-    // const scrollToProjects = () => {
-    //     window.scroll({
-    //         top: window.innerHeight,
-    //         behavior: 'smooth'
-    //     })
-    // }
-
     return(
         <AppBar position="static" className={classes.navBar}>
             <Toolbar>
