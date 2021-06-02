@@ -4,6 +4,7 @@ import {
 	AppBar,
 	Toolbar,
 	Typography,
+    Link
 } from "@material-ui/core";
 
 const useStyles = makeStyles({
@@ -16,11 +17,12 @@ const Navbar = () => {
     const classes = useStyles();
 
     return(
-        <AppBar position="relative" className={classes.navBar}>
+        <AppBar position="static" className={classes.navBar}>
             <Toolbar>
             <Typography variant="h6" color="inherit" noWrap>
-                Album layout
+                TD
             </Typography>
+            <Link color="inherit">Contact Me</Link>
             </Toolbar>
         </AppBar>
     );

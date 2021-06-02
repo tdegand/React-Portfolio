@@ -10,6 +10,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import NavBar from "../nav";
 import MainContent from './maincontent';
 import Footer from "../footer";
+import Image from '../images/background-art2.jpg'
 
 const useStyles = makeStyles((theme) => ({
 	icon: {
@@ -17,7 +18,8 @@ const useStyles = makeStyles((theme) => ({
 	},
 	header: {
         height: window.innerHeight,
-		backgroundColor: theme.palette.background.paper,
+		backgroundImage: `url(${Image})`,
+		backgroundSize: 'contain',
 		padding: theme.spacing(8, 0, 6),
 	},
 	headerButtons: {
