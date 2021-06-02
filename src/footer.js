@@ -7,9 +7,13 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
     footer: {
-      backgroundColor: theme.palette.background.paper,
+      backgroundColor: '#255f37',
+      color: 'white',
       padding: theme.spacing(6),
     },
+    textColor: {
+      color: 'white'
+    }
   }));
 
 const Footer = () => {
@@ -17,10 +21,10 @@ const Footer = () => {
 
     function Copyright() {
         return (
-          <Typography variant="body2" color="textSecondary" align="center">
+          <Typography variant="body2" align="center">
             {'Copyright © '}
             <Link color="inherit" href="https://tylerdegand.com">
-              Your Website
+              Tyler Degand
             </Link>{' '}
             {new Date().getFullYear()}
             {'.'}
@@ -34,7 +38,7 @@ const Footer = () => {
         <Typography variant="h6" align="center" gutterBottom>
             Footer
         </Typography>
-        <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
+        <Typography variant="subtitle1" align="center" component="p">
             Something here to give the footer a purpose!
         </Typography>
         <Copyright />

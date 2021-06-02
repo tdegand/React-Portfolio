@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	cardCon: {
 		width: '100%',
-	}
+	},
 }));
 
 const MainContent = () => {
@@ -43,7 +43,7 @@ const MainContent = () => {
 	
 	console.log(data);
 	return (
-		<Container fixed>
+		<Container fixed >
 			<Grid container className={classes.cardCon} direction="row" justify="center" alignContent="center">
 				{_.map(data, project => {
 						return <ProjectCards key={project.id} project={project}/>

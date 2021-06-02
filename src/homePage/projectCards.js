@@ -38,14 +38,23 @@ const useStyles = makeStyles((theme) => ({
 		transform: 'rotate(180deg)',
 	},
 	card: {
+        position: 'relative',
 		width: 345,
+        margin: '20px',
+        backgroundColor: '#d0d0d0',
+        borderRadius: '10px',
+        boxShadow: '3px 4px 4px -3px #969696'
     },
     expandedImg: {
-        width: '45%',
+        width: '100%',
         padding: '20px',
         display: 'block'
     },
     modal: {
+        width: '80%',
+        maxWidth: '1100px',
+        minWidth: '400px',
+        margin: 'auto',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -55,10 +64,14 @@ const useStyles = makeStyles((theme) => ({
         border: '2px solid #000',
         boxShadow: theme.shadows[5],
         padding: theme.spacing(2, 4, 3),
-        alignItems: 'center'
+        alignItems: 'center',
+        borderRadius: '15px'
     },
     exitModal: {
         float: 'right'
+    },
+    expandedCon: {
+        height: '300px'
     }
 }));
 
@@ -66,7 +79,9 @@ const ColorButton = withStyles(() => ({
 	root: {
 		backgroundColor: '#255f37',
 		color: 'white',
-        marginLeft: '28%',
+        position: 'absolute',
+        bottom: '15px',
+        left: '30%',
 		'&:hover': {
 			backgroundColor: '#007725',
 			color: 'white'
@@ -119,17 +134,17 @@ const ProjectCards = (props) => {
                     </IconButton>
                 </CardActions>
                 <Collapse in={expanded} timeout="auto" unmountOnExit>
-                    <CardContent>
-                    <Typography paragraph>Method:</Typography>
-                    <Typography paragraph>
-                        {project.description}
-                    </Typography>
-                    <Typography paragraph>
-                        {project.technologies.join(', ')}
-                    </Typography>
-                    <ColorButton onClick={handleOpen}>
-                        View Examples
-                    </ColorButton>
+                    <CardContent className={classes.expandedCon}>
+                        <Typography paragraph>Method:</Typography>
+                        <Typography paragraph>
+                            {project.description}
+                        </Typography>
+                        <Typography paragraph>
+                            {project.technologies.join(', ')}
+                        </Typography>
+                        <ColorButton onClick={handleOpen}>
+                            View Examples
+                        </ColorButton>
                     </CardContent>
                 </Collapse>
             </Card>

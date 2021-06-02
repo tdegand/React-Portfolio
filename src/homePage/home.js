@@ -28,7 +28,8 @@ const useStyles = makeStyles((theme) => ({
 		marginTop: theme.spacing(4),
 	},
 	main: {
-		height: 'maxContent'
+		height: 'maxContent',
+		backgroundColor: "#dcdcdc"
 	},
 	headshot: {
 		height: '100%',
