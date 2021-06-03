@@ -6,8 +6,10 @@ import {
   Grid
 } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
+import PDF from '../Web-developer-resume.pdf';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import DescriptionRoundedIcon from '@material-ui/icons/DescriptionRounded';
 
 const useStyles = makeStyles((theme) => ({
     footer: {
@@ -18,6 +20,11 @@ const useStyles = makeStyles((theme) => ({
     },
     textColor: {
       color: '#dcdcdc',
+      fontSize: '16px',
+      padding: '10px'
+    },
+    icon: {
+      marginRight: '2px'
     }
   }));
 
@@ -46,12 +53,20 @@ const Footer = () => {
           <Grid container={true} direction='row' justify="center">
             <Grid item={true}>
               <IconButton href="https://www.linkedin.com/in/tyler-degand-21252bb9/" className={classes.textColor}>
-                <LinkedInIcon fontSize="large"  />
+                <LinkedInIcon fontSize="medium" className={classes.icon}/>
+                LinkedIn
               </IconButton>
             </Grid>
             <Grid item={true}>
               <IconButton href="https://github.com/tdegand" className={classes.textColor}>
-                <GitHubIcon fontSize="large" />
+                <GitHubIcon fontSize="medium" className={classes.icon}/>
+                GitHub
+              </IconButton>
+            </Grid>
+            <Grid item={true}>
+              <IconButton href={PDF} target="_blank" className={classes.textColor}>
+                <DescriptionRoundedIcon fontSize="medium" className={classes.icon} />
+                Resume
               </IconButton>
             </Grid>
           </Grid>
