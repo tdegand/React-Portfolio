@@ -11,9 +11,6 @@ import {
 import BackspaceIcon from '@material-ui/icons/Backspace';
 import SendIcon from '@material-ui/icons/Send';
 
-import LinkedIn from '../images/Linkedin.png';
-import Github from '../images/GitHub_Logo_White.png';
-
 const useStyles = makeStyles((theme) => ({
     modal: {
         width: '80%',
@@ -37,11 +34,27 @@ const useStyles = makeStyles((theme) => ({
     },
     input: {
         width: '85%',
-        margin: '10px'
+        margin: '10px',
+        '& label.Mui-focused': {
+            color: 'green',
+          },
+          '& .MuiOutlinedInput-root': {
+            '&.Mui-focused fieldset': {
+              borderColor: 'green',
+            },
+          },
     },
     inputMessage: {
         width: '85%',
-        margin: '10px'
+        margin: '10px',
+        '& label.Mui-focused': {
+            color: 'green',
+          },
+          '& .MuiOutlinedInput-root': {
+            '&.Mui-focused fieldset': {
+              borderColor: 'green',
+            },
+          },
     },
     form: {
         position: 'relative',
@@ -51,8 +64,12 @@ const useStyles = makeStyles((theme) => ({
     sendButton: {
         position: 'absolute',
         bottom: 0,
-    }
-
+        backgroundColor: '#519872',
+        color: 'white',
+        "&:hover": {
+            backgroundColor: '#3B5249'
+        }
+    },
 }));
 
 const ContactModal = (props) => {
@@ -84,8 +101,7 @@ const ContactModal = (props) => {
                         className={classes.input}
                         required
                         id="outlined-required"
-                        label="Required"
-                        defaultValue="First Name"
+                        label="First Name"
                         variant="outlined"
                         type="text"
                     />
@@ -93,8 +109,7 @@ const ContactModal = (props) => {
                         className={classes.input}
                         required
                         id="outlined-required"
-                        label="Required"
-                        defaultValue="Last Name"
+                        label="Last Name"
                         variant="outlined"
                         type="text"
                     />
@@ -102,8 +117,7 @@ const ContactModal = (props) => {
                         className={classes.input}
                         required
                         id="outlined-required"
-                        label="Required"
-                        defaultValue="Email"
+                        label="Email"
                         variant="outlined"
                         type="email"
                     />
@@ -111,8 +125,7 @@ const ContactModal = (props) => {
                         className={classes.inputMessage}
                         required
                         id="outlined-required"
-                        label="Required"
-                        defaultValue="Message"
+                        label="Send a Message"
                         variant="outlined"
                         multiline
                         rows={4}
@@ -122,7 +135,6 @@ const ContactModal = (props) => {
                     <Button
                         className={classes.sendButton} 
                         variant="contained"
-                        color="primary"
                         endIcon={<SendIcon />}
                     >
                         Send

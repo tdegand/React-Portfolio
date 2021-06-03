@@ -1,7 +1,6 @@
 import React from "react";
 import { makeStyles} from "@material-ui/core/styles";
 import clsx from 'clsx';
-import _ from "lodash";
 import {
 	Grid,
 	Typography,
@@ -9,7 +8,6 @@ import {
 	CardMedia,
 	CardContent,
 	CardActions,
-	CardHeader,
 	IconButton,
 	Collapse,
     Modal,
@@ -75,7 +73,10 @@ const useStyles = makeStyles((theme) => ({
     bottom: {
         marginTop: '2px',
         borderTop: 'solid 1px #34252F'
-    }
+    },
+    // otherButtons: {
+
+    // }
 }));
 
 const ProjectCards = (props) => {
@@ -128,6 +129,18 @@ const ProjectCards = (props) => {
                         <Typography paragraph>
                             {project.technologies.join(', ')}
                         </Typography>
+                        <Grid className={`cardButtonCon`} container={true} justify="space-evenly">
+                            <Grid item={true}>
+                                <Link href={project.live_link} className={`cardButtons hvr-float`}>
+                                    Demo
+                                </Link>
+                            </Grid>
+                            <Grid item={true}>
+                                <Link href={project.github_link} className={`cardButtons hvr-float`}>
+                                    Github Repo
+                                </Link>
+                            </Grid>
+                        </Grid>
                         <Link className={`cardButton hvr-float`} onClick={handleOpen}>
                             View Examples
                         </Link>
@@ -153,8 +166,8 @@ const ProjectCards = (props) => {
                     </IconButton>
                     <h2 id="transition-modal-title">Example Images</h2>
                     <p id="transition-modal-description">A few more images of the work and how it looks</p>
-                    <img className={classes.expandedImg} src={img1}></img>
-                    <img className={classes.expandedImg} src={img2}></img>
+                    <img className={classes.expandedImg} src={img1} alt={project.alt[1]}></img>
+                    <img className={classes.expandedImg} src={img2} alt={project.alt[2]}></img>
                 </div>
                 </Fade>
             </Modal>

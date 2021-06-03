@@ -55,6 +55,9 @@ const Footer = () => {
               </IconButton>
             </Grid>
           </Grid>
+          <Typography variant="subtitle1" align="center" component="p">
+              Made with React.JS and Material-UI
+          </Typography>
           <Copyright />
         </footer>
     );

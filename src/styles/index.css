@@ -20,10 +20,21 @@
 	bottom: 15px;
 	left: 24%;
 }
-
 .expandedCon {
-  height: 300px;
+  height: 350px;
   font-family: 'Caudex', serif;
+}
+
+.cardButtonCon {
+	position: absolute;
+	bottom: 75px;
+	left: 0;
+}
+
+.cardButtons {
+	padding: 5px 10px !important;
+	width: 130px;
+    text-align: center;
 }
 
 /* css animations */

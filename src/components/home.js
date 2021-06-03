@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	main: {
 		height: 'maxContent',
-		backgroundColor: '#BEC5AD',
+		backgroundColor: '#a6ab9b',
 		boxShadow: 'inset 0px 0px 4px 3px rgb(0 0 0 / 80%)'
 	},
 	headshot: {

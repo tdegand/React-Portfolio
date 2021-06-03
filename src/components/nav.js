@@ -25,7 +25,8 @@ const useStyles = makeStyles((theme) => ({
     logo: {
         fontFamily: 'Caveat, cursive',
         fontSize: '27px',
-        paddingRight: '10px'
+        paddingRight: '10px',
+        fontWeight: 'bold'
     },
     modal: {
         width: '80%',
