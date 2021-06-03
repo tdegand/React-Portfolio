@@ -10,9 +10,6 @@ import Data from '../data/data.json';
 
 
 const useStyles = makeStyles((theme) => ({
-	navBar: {
-		backgroundColor: "paper",
-	},
 	media: {
 		height: 0,
 		paddingTop: '56.25%', // 16:9
@@ -32,6 +29,10 @@ const useStyles = makeStyles((theme) => ({
 		paddingTop: '100px',
 		paddingBottom: '100px',
 	},
+	break: {
+		borderTop: '5px solid #34252F',
+  		borderRadius: '5px'
+	}
 }));
 
 const MainContent = () => {
@@ -44,6 +45,7 @@ const MainContent = () => {
 
 	return (
 		<Container fixed >
+			<hr className={classes.break }></hr>
 			<Grid container className={classes.cardCon} direction="row" justify="center" alignContent="center">
 				{_.map(data, project => {
 						return <ProjectCards key={project.id} project={project}/>

@@ -23,7 +23,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 const useStyles = makeStyles((theme) => ({
 	media: {
 		height: 0,
-		paddingTop: '100%', // 16:9
+		paddingTop: '75%', // 16:9
 	},
 	expand: {
 		transform: 'rotate(0deg)',
@@ -41,14 +41,16 @@ const useStyles = makeStyles((theme) => ({
         position: 'relative',
 		width: 345,
         margin: '20px',
-        backgroundColor: '#fff',
+        backgroundColor: '#dcdcdc',
         borderRadius: '10px',
+        border: 'solid 3px #3B5249',
         boxShadow: '3px 4px 4px -3px #969696',
     },
     expandedImg: {
         width: '100%',
-        padding: '20px',
-        display: 'block'
+        marginTop: '20px',
+        display: 'block',
+        boxShadow: '3px 4px 4px -3px #969696'
     },
     modal: {
         width: '80%',
@@ -60,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
     },
       paper: {
-        backgroundColor: "#ccc",
+        backgroundColor: "#dcdcdc",
         border: '2px solid #000',
         boxShadow: theme.shadows[5],
         padding: theme.spacing(2, 4, 3),
@@ -70,6 +72,10 @@ const useStyles = makeStyles((theme) => ({
     exitModal: {
         float: 'right'
     },
+    bottom: {
+        marginTop: '2px',
+        borderTop: 'solid 1px #34252F'
+    }
 }));
 
 const ProjectCards = (props) => {
@@ -101,7 +107,7 @@ const ProjectCards = (props) => {
                     image={squareImg}
                     title={project.alt[0]}
                 />
-                <CardActions disableSpacing>
+                <CardActions disableSpacing className={classes.bottom}>
                     <IconButton
                     className={clsx(classes.expand, {
                         [classes.expandOpen]: expanded,

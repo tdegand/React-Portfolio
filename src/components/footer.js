@@ -2,17 +2,22 @@ import React from 'react';
 import {
 	Typography,
 	Link,
+  IconButton,
+  Grid
 } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import GitHubIcon from '@material-ui/icons/GitHub';
 
 const useStyles = makeStyles((theme) => ({
     footer: {
-      backgroundColor: '#255f37',
-      color: 'white',
-      padding: theme.spacing(6),
+      backgroundColor: '#519872',
+      color: '#dcdcdc',
+      padding: theme.spacing(3),
+      fontWeight: 'bold'
     },
     textColor: {
-      color: 'white'
+      color: '#dcdcdc',
     }
   }));
 
@@ -35,13 +40,22 @@ const Footer = () => {
     return(
         //Add My Resume to the bottom of this so it can be downloaded
         <footer className={classes.footer}>
-        <Typography variant="h6" align="center" gutterBottom>
-            Footer
-        </Typography>
-        <Typography variant="subtitle1" align="center" component="p">
-            Something here to give the footer a purpose!
-        </Typography>
-        <Copyright />
+          <Typography variant="subtitle1" align="center" component="p">
+              See More of my work!
+          </Typography>
+          <Grid container={true} direction='row' justify="center">
+            <Grid item={true}>
+              <IconButton href="https://www.linkedin.com/in/tyler-degand-21252bb9/" className={classes.textColor}>
+                <LinkedInIcon fontSize="large"  />
+              </IconButton>
+            </Grid>
+            <Grid item={true}>
+              <IconButton href="https://github.com/tdegand" className={classes.textColor}>
+                <GitHubIcon fontSize="large" />
+              </IconButton>
+            </Grid>
+          </Grid>
+          <Copyright />
         </footer>
     );
 }

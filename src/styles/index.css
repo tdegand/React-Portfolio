@@ -18,7 +18,7 @@
 .cardButton {
 	position: absolute;
 	bottom: 15px;
-	left: 30%;
+	left: 24%;
 }
 
 .expandedCon {
@@ -65,8 +65,11 @@
 	transition-property: transform;
 	-webkit-transition-timing-function: ease-out;
 	transition-timing-function: ease-out;
-	background-color: #255f37;
+	background-color: #519872;
 	color: #fff !important;
+	font-weight: 300;
+	font-size: 16px;
+	letter-spacing: 1.5px;
 	padding: 10px 25px;
 	border-radius: 5px;
 	font-family: "Caudex", serif;
@@ -77,6 +80,6 @@
 .hvr-float:active {
 	-webkit-transform: translateY(-8px);
 	transform: translateY(-8px);
-	background-color: #007725;
+	background-color: #3B5249;
 	text-decoration: none !important;
 }

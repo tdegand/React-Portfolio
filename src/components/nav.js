@@ -6,19 +6,17 @@ import {
 	Typography,
     Link,
     Grid,
-    Modal,
-    Backdrop,
-    Fade,
-    IconButton,
-    TextField,
-    Button
 } from "@material-ui/core";
 import { scrollToProjects, scrollToAbout } from '../utils/effects.js';
-import BackspaceIcon from '@material-ui/icons/Backspace';
+import ContactModal from './contactModal';
 
 const useStyles = makeStyles((theme) => ({
     navBar: {
-        backgroundColor: '#255f37',
+        backgroundColor: '#519872',
+        color: '#34252F'
+    },
+    toolBar: {
+        boxShadow: '0px 3px 5px 1px rgb(0 0 0 / 90%)'
     },
     navContainer: {
         width: '350px',
@@ -26,7 +24,8 @@ const useStyles = makeStyles((theme) => ({
     },
     logo: {
         fontFamily: 'Caveat, cursive',
-        paddingRight: '5px'
+        fontSize: '27px',
+        paddingRight: '10px'
     },
     modal: {
         width: '80%',
@@ -59,20 +58,13 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
-const Navbar = () => {
+const Navbar = (props) => {
     const classes = useStyles();
-    const [open, setOpen] = React.useState(false);
-
-    const handleOpen = () => {
-        setOpen(true);
-    };
-    const handleClose = () => {
-        setOpen(false);
-    }; 
+    const {handleClose, handleOpen, open } = props;  
 
     return(
         <AppBar position="static" className={classes.navBar}>
-            <Toolbar>
+            <Toolbar className={classes.toolBar}>
                 <Grid container={true} justify='space-between'>
                     <Grid item={true} className={classes.navLink}>
                     <Typography className={classes.logo} variant="h6" color="inherit" noWrap >
@@ -88,72 +80,7 @@ const Navbar = () => {
                     </Grid>
                 </Grid>
             </Toolbar>
-            <Modal
-                aria-labelledby="transition-modal-title"
-                aria-describedby="transition-modal-description"
-                className={classes.modal}
-                open={open}
-                onClose={handleClose}
-                closeAfterTransition
-                BackdropComponent={Backdrop}
-                BackdropProps={{
-                timeout: 500,
-                }}
-            >
-                <Fade in={open}>
-                <div className={classes.paper}>
-                    <IconButton className={classes.exitModal} color="inherit" onClick={handleClose}>
-                        <BackspaceIcon>Back</BackspaceIcon>
-                    </IconButton>
-                    <h2 id="transition-modal-title">Contact Me</h2>
-                    <p id="transition-modal-description">Inquiring about a job or just have a question? Send me a message!</p>
-                    <form autoComplete="on">
-                        <TextField
-                            className={classes.input}
-                            required
-                            id="outlined-required"
-                            label="Required"
-                            defaultValue="First Name"
-                            variant="outlined"
-                            type="text"
-                        />
-                        <TextField
-                            className={classes.input}
-                            required
-                            id="outlined-required"
-                            label="Required"
-                            defaultValue="Last Name"
-                            variant="outlined"
-                            type="text"
-                        />
-                        <TextField
-                            className={classes.input}
-                            required
-                            id="outlined-required"
-                            label="Required"
-                            defaultValue="Email"
-                            variant="outlined"
-                            type="email"
-                        />
-                        <TextField
-                            className={classes.inputMessage}
-                            required
-                            id="outlined-required"
-                            label="Required"
-                            defaultValue="Message"
-                            variant="outlined"
-                            multiline
-                            rows={4}
-                            fullWidth
-                            type="text"
-                        />
-                        <Button>
-
-                        </Button>
-                    </form>
-                </div>
-                </Fade>
-            </Modal>
+            <ContactModal open={open} handleClose={handleClose}/>
         </AppBar>
         
     );

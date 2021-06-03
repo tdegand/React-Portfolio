@@ -10,7 +10,7 @@ import NavBar from './nav';
 import MainContent from './maincontent';
 import About from './about';
 import Footer from './footer';
-import Image from '../images/beanstalk-dark.png';
+import Image from '../images/wood.jpg';
 import { scrollToProjects } from '../utils/effects.js';
 import Headshot from '../images/Tyler.jpg';
 
@@ -21,8 +21,8 @@ const useStyles = makeStyles((theme) => ({
 	header: {
 		height: window.innerHeight,
 		backgroundImage: `url(${Image})`,
-		backgroundSize: 'auto',
-		backgroundRepeat: 'repeat',
+		backgroundSize: 'cover',
+		backgroundRepeat: 'no-repeat',
 		padding: theme.spacing(8, 0, 6),
 	},
 	headerButtons: {
@@ -30,31 +30,48 @@ const useStyles = makeStyles((theme) => ({
 	},
 	main: {
 		height: 'maxContent',
-		backgroundColor: "#dcdcdc"
+		backgroundColor: '#BEC5AD',
+		boxShadow: 'inset 0px 0px 4px 3px rgb(0 0 0 / 80%)'
 	},
 	headshot: {
 		height: '100%',
 		width: '30%',
 		borderRadius: '50px',
 		minWidth: '150px',
-		maxWidth: '250px'
+		maxWidth: '250px',
+		border: 'solid 5px #34252F'
 	},
 	text: {
-		color: 'white',
+		color: '#000000',
 		fontFamily: 'Source Sans Pro, sans-serif'
 	},
 	headerCon: {
 		height: '65%'
+	},
+	textBox: {
+		backgroundColor: 'rgba(220,220,220, 0.8)',
+		padding: '35px',
+		margin: '10px',
+		borderRadius: '25px',
+		border: 'solid 3px #3B5249'
 	}
 }));
 
 const Home = () => {
 	const classes = useStyles();
+	const [open, setOpen] = React.useState(false);
+
+    const handleOpen = () => {
+        setOpen(true);
+    };
+    const handleClose = () => {
+        setOpen(false);
+    };
 
 	return (
 		<React.Fragment>
 			<CssBaseline />
-			<NavBar />
+			<NavBar open={open} handleClose={handleClose} handleOpen={handleOpen} />
 			<header>
 				{/* Hero unit */}
 				<div className={classes.header}>
@@ -63,7 +80,7 @@ const Home = () => {
 							<Grid container={true} justify='center'>
 								<img className={classes.headshot} src={Headshot} alt="Italian Trulli"></img>
 							</Grid>
-							<Grid item={true}>
+							<Grid item={true} className={classes.textBox}>
 								<Typography
 									className={classes.text}
 									component="h1"

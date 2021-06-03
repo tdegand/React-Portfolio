@@ -1,8 +1,6 @@
 import React from "react";
-import { Link, Grid } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-
-import LinkedIn from '../images/Linkedin.png'
 
 const useStyles = makeStyles(() => ({
     parentAbout: {
@@ -19,6 +17,11 @@ const useStyles = makeStyles(() => ({
 		fontWeight: "bold",
 		fontSize: "22px",
         padding: '50px',
+		backgroundColor: 'rgba(220,220,220, 0.8)',
+		padding: '35px',
+		margin: 'auto',
+		borderRadius: '25px',
+		boxShadow: '3px 4px 4px -3px #5d5d5d'
 	},
 }));
 
@@ -26,7 +29,7 @@ const About = () => {
 	const classes = useStyles();
 
 	return (
-		<Grid conatiner={true} className={classes.parentAbout}>
+		<Grid container={true} className={classes.parentAbout}>
 			<Grid
 				container={true}
 				className={classes.aboutMe}
