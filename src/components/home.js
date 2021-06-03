@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	textBox: {
 		backgroundColor: 'rgba(220,220,220, 0.8)',
-		padding: '35px',
+		padding: '15px',
 		margin: '10px',
 		borderRadius: '25px',
 		border: 'solid 3px #3B5249'
@@ -77,7 +77,7 @@ const Home = () => {
 							<Typography
 								className={classes.text}
 								component="h1"
-								variant="h2"
+								variant="h3"
 								align="center"
 								color="initial"
 								gutterBottom

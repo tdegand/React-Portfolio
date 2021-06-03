@@ -17,7 +17,7 @@ const useStyles = makeStyles(() => ({
 		fontFamily: "Caudex, serif",
 		fontWeight: "bold",
 		fontSize: "22px",
-        padding: '50px',
+        padding: '20px',
 		backgroundColor: 'rgba(220,220,220, 0.8)',
 		borderRadius: '25px',
 		boxShadow: '3px 4px 4px -3px #5d5d5d'
