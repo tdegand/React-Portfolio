@@ -1,0 +1,82 @@
+/* Font Families:
+    font-family: 'Caudex', serif; PARAGRAPHS and other small text
+    font-family: 'Sigmar One', cursive; LINKS/BUTTONS
+    font-family: 'Source Sans Pro', sans-serif;  HEADERS
+
+    for TD: font-family: 'Caveat', cursive;
+*/
+@import url("https://fonts.googleapis.com/css2?family=Caudex&family=Sigmar+One&family=Source+Sans+Pro:ital,wght@1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+
+/* Custom Styling */
+
+.headerText {
+	font-family: "Source Sans Pro", sans-serif !important;
+	padding: 10px;
+}
+
+.cardButton {
+	position: absolute;
+	bottom: 15px;
+	left: 30%;
+}
+
+.expandedCon {
+  height: 300px;
+  font-family: 'Caudex', serif;
+}
+
+/* css animations */
+
+/* Grow */
+.hvr-grow {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	-webkit-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+	-webkit-transition-property: transform;
+	transition-property: transform;
+	padding: 5px;
+	cursor: pointer;
+	font-family: "Sigmar One", cursive;
+	font-size: 16px;
+}
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+	text-decoration: none !important;
+}
+
+/* Float */
+.hvr-float {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-property: transform;
+	transition-property: transform;
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+	background-color: #255f37;
+	color: #fff !important;
+	padding: 10px 25px;
+	border-radius: 5px;
+	font-family: "Caudex", serif;
+	cursor: pointer;
+}
+.hvr-float:hover,
+.hvr-float:focus,
+.hvr-float:active {
+	-webkit-transform: translateY(-8px);
+	transform: translateY(-8px);
+	background-color: #007725;
+	text-decoration: none !important;
+}

@@ -15,7 +15,8 @@ import {
     Modal,
     Backdrop,
     Fade,
-    Button
+    Button,
+    Link
 } from "@material-ui/core";
 import BackspaceIcon from '@material-ui/icons/Backspace';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
@@ -41,9 +42,9 @@ const useStyles = makeStyles((theme) => ({
         position: 'relative',
 		width: 345,
         margin: '20px',
-        backgroundColor: '#d0d0d0',
+        backgroundColor: '#fff',
         borderRadius: '10px',
-        boxShadow: '3px 4px 4px -3px #969696'
+        boxShadow: '3px 4px 4px -3px #969696',
     },
     expandedImg: {
         width: '100%',
@@ -70,24 +71,7 @@ const useStyles = makeStyles((theme) => ({
     exitModal: {
         float: 'right'
     },
-    expandedCon: {
-        height: '300px'
-    }
 }));
-
-const ColorButton = withStyles(() => ({
-	root: {
-		backgroundColor: '#255f37',
-		color: 'white',
-        position: 'absolute',
-        bottom: '15px',
-        left: '30%',
-		'&:hover': {
-			backgroundColor: '#007725',
-			color: 'white'
-		},
-	},
-  }))(Button);
 
 const ProjectCards = (props) => {
 	const classes = useStyles();
@@ -112,9 +96,7 @@ const ProjectCards = (props) => {
 	return (
         <Grid>
             <Card className={classes.card} variant="outlined">
-                <CardHeader
-                    title={project.project_name}
-                />
+                <Typography component="h5" variant="h5" className={'headerText'}>{project.project_name}</Typography>
                 <CardMedia
                     className={classes.media}
                     image={squareImg}
@@ -133,7 +115,7 @@ const ProjectCards = (props) => {
                     </IconButton>
                 </CardActions>
                 <Collapse in={expanded} timeout="auto" unmountOnExit>
-                    <CardContent className={classes.expandedCon}>
+                    <CardContent className={'expandedCon'}>
                         <Typography paragraph>Method:</Typography>
                         <Typography paragraph>
                             {project.description}
@@ -141,9 +123,9 @@ const ProjectCards = (props) => {
                         <Typography paragraph>
                             {project.technologies.join(', ')}
                         </Typography>
-                        <ColorButton onClick={handleOpen}>
+                        <Link className={`cardButton hvr-float`} onClick={handleOpen}>
                             View Examples
-                        </ColorButton>
+                        </Link>
                     </CardContent>
                 </Collapse>
             </Card>

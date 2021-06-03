@@ -29,6 +29,8 @@ const useStyles = makeStyles((theme) => ({
 	},
 	cardCon: {
 		width: '100%',
+		paddingTop: '100px',
+		paddingBottom: '100px',
 	},
 }));
 

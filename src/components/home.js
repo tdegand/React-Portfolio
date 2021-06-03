@@ -1,16 +1,17 @@
 import React from 'react';
 import {
-	Button,
+	Link,
 	CssBaseline,
 	Grid,
 	Typography,
 } from '@material-ui/core';
-import { makeStyles, withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import NavBar from './nav';
 import MainContent from './maincontent';
+import About from './about';
 import Footer from './footer';
 import Image from '../images/beanstalk-dark.png';
-import scrollToProjects from '../utils/effects.js';
+import { scrollToProjects } from '../utils/effects.js';
 import Headshot from '../images/Tyler.jpg';
 
 const useStyles = makeStyles((theme) => ({
@@ -39,23 +40,13 @@ const useStyles = makeStyles((theme) => ({
 		maxWidth: '250px'
 	},
 	text: {
-		color: 'white'
+		color: 'white',
+		fontFamily: 'Source Sans Pro, sans-serif'
 	},
 	headerCon: {
 		height: '65%'
 	}
 }));
-
-const ColorButton = withStyles(() => ({
-	root: {
-		backgroundColor: '#255f37',
-		color: 'white',
-		'&:hover': {
-			backgroundColor: '#007725',
-			color: 'white'
-		},
-	},
-  }))(Button);
 
 const Home = () => {
 	const classes = useStyles();
@@ -95,9 +86,9 @@ const Home = () => {
 								<div className={classes.headerButtons}>
 									<Grid container spacing={2} justify="center">
 										<Grid item>
-											<ColorButton variant="contained" size='large' onClick={scrollToProjects}>
+											<Link className={'hvr-float'} onClick={scrollToProjects}>
 												My Work
-											</ColorButton>
+											</Link>
 										</Grid>
 									</Grid>
 								</div>
@@ -107,6 +98,7 @@ const Home = () => {
 				</div>
 			</header>
 			<main className={classes.main}>
+				<About />
 				<MainContent />
 			</main>
 			<Footer />

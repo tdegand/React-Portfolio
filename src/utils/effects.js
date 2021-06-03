@@ -1,8 +1,17 @@
 const scrollToProjects = () => {
     window.scroll({
-        top: window.innerHeight + 75,
+        top: window.innerHeight + 675,
+        behavior: 'smooth'
+    })
+}
+const scrollToAbout = () => {
+    window.scroll({
+        top: window.innerHeight,
         behavior: 'smooth'
     })
 }
 
-export default scrollToProjects
+module.exports = { 
+    scrollToProjects: scrollToProjects, 
+    scrollToAbout: scrollToAbout 
+}
