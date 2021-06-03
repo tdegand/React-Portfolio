@@ -2,6 +2,7 @@ import React from "react";
 import { Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
+
 const useStyles = makeStyles(() => ({
     parentAbout: {
         height: "fitContent",
@@ -26,6 +27,8 @@ const useStyles = makeStyles(() => ({
 const About = () => {
 	const classes = useStyles();
 
+	
+
 	return (
 		<Grid container={true} className={classes.parentAbout}>
 			<Grid
@@ -33,6 +36,8 @@ const About = () => {
 				className={classes.aboutMe}
 				justify="center"
 				alignContent="center"
+				data-aos="fade-right"
+				data-aos-duration="800"
 			>
 				<Grid item={true}>
 					<p>

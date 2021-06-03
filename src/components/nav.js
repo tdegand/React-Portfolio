@@ -64,11 +64,11 @@ const Navbar = (props) => {
     const {handleClose, handleOpen, open } = props;  
 
     return(
-        <AppBar position="static" className={classes.navBar}>
+        <AppBar position="absolute" className={classes.navBar} data-aos="fade-down" data-aos-duration="800">
             <Toolbar className={classes.toolBar}>
                 <Grid container={true} justify='space-between'>
                     <Grid item={true} className={classes.navLink}>
-                    <Typography className={classes.logo} variant="h6" color="inherit" noWrap >
+                    <Typography className={classes.logo} variant="h4" color="inherit" noWrap >
                         TD
                     </Typography>
                     </Grid>

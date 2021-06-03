@@ -74,7 +74,50 @@ const useStyles = makeStyles((theme) => ({
 
 const ContactModal = (props) => {
     const classes = useStyles();
-    const {handleClose, open } = props; 
+    const {handleClose, open } = props;
+
+    const [first, setFirst] = React.useState('');
+    const [last, setLast] = React.useState('');
+    const [email, setEmail] = React.useState('');
+    const [message, setMessage] = React.useState('');
+    
+    const handlefirstChange = (event) => {
+        event.preventDefault();
+        const target = event.target;
+        const value = target.value;
+        const first = target.first;
+
+        setFirst({ first: value });
+    }
+
+    const handleLastChange = (event) => {
+        event.preventDefault();
+        const target = event.target;
+        const value = target.value;
+        const last = target.last;
+        
+        setLast({ last: value });
+    }
+
+    const handleEmailChange = (event) => {
+        event.preventDefault();
+        const target = event.target;
+        const value = target.value;
+        const email= target.email;
+
+        setEmail({ email: value });
+    }
+
+    const handleMessageChange = (event) => {
+        event.preventDefault();
+        const target = event.target;
+        const value = target.value;
+        const message = target.message;
+
+        setMessage({ message: value });
+    }
+
+    console.log(first, last, email, message);
 
     return(
         <Modal
@@ -104,6 +147,7 @@ const ContactModal = (props) => {
                         label="First Name"
                         variant="outlined"
                         type="text"
+                        onChange={handlefirstChange}
                     />
                     <TextField
                         className={classes.input}
@@ -112,6 +156,7 @@ const ContactModal = (props) => {
                         label="Last Name"
                         variant="outlined"
                         type="text"
+                        onChange={handleLastChange}
                     />
                     <TextField
                         className={classes.input}
@@ -120,6 +165,7 @@ const ContactModal = (props) => {
                         label="Email"
                         variant="outlined"
                         type="email"
+                        onChange={handleEmailChange}
                     />
                     <TextField
                         className={classes.inputMessage}
@@ -131,6 +177,7 @@ const ContactModal = (props) => {
                         rows={4}
                         fullWidth
                         type="text"
+                        onChange={handleMessageChange}
                     />
                     <Button
                         className={classes.sendButton} 

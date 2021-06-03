@@ -1,15 +1,15 @@
 import React from "react";
-import { makeStyles} from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import clsx from 'clsx';
 import {
-	Grid,
-	Typography,
-	Card,
-	CardMedia,
-	CardContent,
-	CardActions,
-	IconButton,
-	Collapse,
+    Grid,
+    Typography,
+    Card,
+    CardMedia,
+    CardContent,
+    CardActions,
+    IconButton,
+    Collapse,
     Modal,
     Backdrop,
     Fade,
@@ -19,25 +19,25 @@ import BackspaceIcon from '@material-ui/icons/Backspace';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 const useStyles = makeStyles((theme) => ({
-	media: {
-		height: 0,
-		paddingTop: '75%', // 16:9
-	},
-	expand: {
-		transform: 'rotate(0deg)',
-		marginLeft: '42.5%',
+    media: {
+        height: 0,
+        paddingTop: '75%', // 16:9
+    },
+    expand: {
+        transform: 'rotate(0deg)',
+        marginLeft: '42.5%',
         width: '50px',
         height: '50px',
-		transition: theme.transitions.create('transform', {
-			duration: theme.transitions.duration.shortest,
-		}),
-	},
-	expandOpen: {
-		transform: 'rotate(180deg)',
-	},
-	card: {
+        transition: theme.transitions.create('transform', {
+            duration: theme.transitions.duration.shortest,
+        }),
+    },
+    expandOpen: {
+        transform: 'rotate(180deg)',
+    },
+    card: {
         position: 'relative',
-		width: 345,
+        width: 345,
         margin: '20px',
         backgroundColor: '#dcdcdc',
         borderRadius: '10px',
@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         justifyContent: 'center',
     },
-      paper: {
+    paper: {
         backgroundColor: "#dcdcdc",
         border: '2px solid #000',
         boxShadow: theme.shadows[5],
@@ -80,7 +80,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const ProjectCards = (props) => {
-	const classes = useStyles();
+    const classes = useStyles();
     const { project } = props;
     const [open, setOpen] = React.useState(false);
     const [expanded, setExpanded] = React.useState(false);
@@ -93,15 +93,15 @@ const ProjectCards = (props) => {
     };
     const handleExpandClick = () => {
         setExpanded(!expanded)
-    };  
+    };
 
     const squareImg = require('../images/' + project.image_urls[0] + '.jpg').default;
     const img1 = require('../images/' + project.image_urls[1] + '.jpg').default;
     const img2 = require('../images/' + project.image_urls[2] + '.jpg').default;
 
-	return (
+    return (
         <Grid>
-            <Card className={classes.card} variant="outlined">
+            <Card className={classes.card} variant="outlined" >
                 <Typography component="h5" variant="h5" className={'headerText'}>{project.project_name}</Typography>
                 <CardMedia
                     className={classes.media}
@@ -110,14 +110,14 @@ const ProjectCards = (props) => {
                 />
                 <CardActions disableSpacing className={classes.bottom}>
                     <IconButton
-                    className={clsx(classes.expand, {
-                        [classes.expandOpen]: expanded,
-                    })}
-                    onClick={handleExpandClick}
-                    aria-expanded={expanded}
-                    aria-label="show more"
+                        className={clsx(classes.expand, {
+                            [classes.expandOpen]: expanded,
+                        })}
+                        onClick={handleExpandClick}
+                        aria-expanded={expanded}
+                        aria-label="show more"
                     >
-                    <ExpandMoreIcon />
+                        <ExpandMoreIcon />
                     </IconButton>
                 </CardActions>
                 <Collapse in={expanded} timeout="auto" unmountOnExit>
@@ -156,23 +156,24 @@ const ProjectCards = (props) => {
                 closeAfterTransition
                 BackdropComponent={Backdrop}
                 BackdropProps={{
-                timeout: 500,
+                    timeout: 500,
                 }}
             >
                 <Fade in={open}>
-                <div className={classes.paper}>
-                    <IconButton className={classes.exitModal} color="inherit" onClick={handleClose}>
-                        <BackspaceIcon>Back</BackspaceIcon>
-                    </IconButton>
-                    <h2 id="transition-modal-title">Example Images</h2>
-                    <p id="transition-modal-description">A few more images of the work and how it looks</p>
-                    <img className={classes.expandedImg} src={img1} alt={project.alt[1]}></img>
-                    <img className={classes.expandedImg} src={img2} alt={project.alt[2]}></img>
-                </div>
+                    <div className={classes.paper}>
+                        <IconButton className={classes.exitModal} color="inherit" onClick={handleClose}>
+                            <BackspaceIcon>Back</BackspaceIcon>
+                        </IconButton>
+                        <h2 id="transition-modal-title">Example Images</h2>
+                        <p id="transition-modal-description">A few more images of the work and how it looks</p>
+                        <img className={classes.expandedImg} src={img1} alt={project.alt[1]}></img>
+                        <img className={classes.expandedImg} src={img2} alt={project.alt[2]}></img>
+                    </div>
                 </Fade>
             </Modal>
         </Grid>
-        
-)}
+
+    )
+}
 
 export default ProjectCards

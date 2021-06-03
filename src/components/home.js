@@ -33,20 +33,13 @@ const useStyles = makeStyles((theme) => ({
 		backgroundColor: '#a6ab9b',
 		boxShadow: 'inset 0px 0px 4px 3px rgb(0 0 0 / 80%)'
 	},
-	headshot: {
-		height: '100%',
-		width: '30%',
-		borderRadius: '50px',
-		minWidth: '150px',
-		maxWidth: '250px',
-		border: 'solid 5px #34252F'
-	},
 	text: {
 		color: '#000000',
 		fontFamily: 'Source Sans Pro, sans-serif'
 	},
 	headerCon: {
-		height: '65%'
+		height: '65%',
+		marginTop: '100px'
 	},
 	textBox: {
 		backgroundColor: 'rgba(220,220,220, 0.8)',
@@ -61,12 +54,12 @@ const Home = () => {
 	const classes = useStyles();
 	const [open, setOpen] = React.useState(false);
 
-    const handleOpen = () => {
-        setOpen(true);
-    };
-    const handleClose = () => {
-        setOpen(false);
-    };
+	const handleOpen = () => {
+		setOpen(true);
+	};
+	const handleClose = () => {
+		setOpen(false);
+	};
 
 	return (
 		<React.Fragment>
@@ -76,41 +69,41 @@ const Home = () => {
 				{/* Hero unit */}
 				<div className={classes.header}>
 					{/* <Container maxWidth="sm" justify="start"> */}
-						<Grid container={true} justify='center' alignContent='space-between' className={classes.headerCon}>
-							<Grid container={true} justify='center'>
-								<img className={classes.headshot} src={Headshot} alt="Italian Trulli"></img>
-							</Grid>
-							<Grid item={true} className={classes.textBox}>
-								<Typography
-									className={classes.text}
-									component="h1"
-									variant="h2"
-									align="center"
-									color="initial"
-									gutterBottom
-								>
-									I'm Tyler Degand
-								</Typography>
-								<Typography
-									className={classes.text}
-									variant="h4"
-									align="center"
-									color="textSecondary"
-									paragraph
-								>
-									Full Stack Web Developer
-								</Typography>
-								<div className={classes.headerButtons}>
-									<Grid container spacing={2} justify="center">
-										<Grid item>
-											<Link className={'hvr-float'} onClick={scrollToProjects}>
-												My Work
-											</Link>
-										</Grid>
-									</Grid>
-								</div>
-							</Grid>
+					<Grid container={true} justify='center' alignContent='space-between' className={classes.headerCon}>
+						<Grid container={true} justify='center'>
+							<img className={`headshot`} src={Headshot} alt="Tyler Degand" data-aos="fade-right" data-aos-offset="500" data-aos-duration="800"></img>
 						</Grid>
+						<Grid item={true} className={classes.textBox} data-aos="fade-left" data-aos-offset="300" data-aos-duration="800">
+							<Typography
+								className={classes.text}
+								component="h1"
+								variant="h2"
+								align="center"
+								color="initial"
+								gutterBottom
+							>
+								I'm Tyler Degand
+								</Typography>
+							<Typography
+								className={classes.text}
+								variant="h4"
+								align="center"
+								color="textSecondary"
+								paragraph
+							>
+								Full Stack Web Developer
+								</Typography>
+							<div className={classes.headerButtons}>
+								<Grid container spacing={2} justify="center">
+									<Grid item>
+										<Link className={'hvr-float'} onClick={scrollToProjects}>
+											My Work
+											</Link>
+									</Grid>
+								</Grid>
+							</div>
+						</Grid>
+					</Grid>
 					{/* </Container> */}
 				</div>
 			</header>

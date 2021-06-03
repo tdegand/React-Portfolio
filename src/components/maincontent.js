@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	break: {
 		borderTop: '5px solid #34252F',
-  		borderRadius: '5px'
+		borderRadius: '5px'
 	}
 }));
 
@@ -45,10 +45,10 @@ const MainContent = () => {
 
 	return (
 		<Container fixed >
-			<hr className={classes.break }></hr>
-			<Grid container className={classes.cardCon} direction="row" justify="center" alignContent="center">
+			<hr className={classes.break}></hr>
+			<Grid container className={classes.cardCon} direction="row" justify="center" alignContent="center" data-aos="fade-left" data-aos-duration="800">
 				{_.map(data, project => {
-						return <ProjectCards key={project.id} project={project}/>
+					return <ProjectCards key={project.id} project={project} />
 				})}
 			</Grid>
 		</Container>
