@@ -6,9 +6,9 @@ import {
 	Typography,
 } from '@material-ui/core';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
-import NavBar from '../nav';
+import NavBar from './nav';
 import MainContent from './maincontent';
-import Footer from '../footer';
+import Footer from './footer';
 import Image from '../images/beanstalk-dark.png';
 import scrollToProjects from '../utils/effects.js';
 import Headshot from '../images/Tyler.jpg';
@@ -58,7 +58,6 @@ const ColorButton = withStyles(() => ({
   }))(Button);
 
 const Home = () => {
-	console.log(window.innerHeight);
 	const classes = useStyles();
 
 	return (
@@ -96,7 +95,7 @@ const Home = () => {
 								<div className={classes.headerButtons}>
 									<Grid container spacing={2} justify="center">
 										<Grid item>
-											<ColorButton variant="contained" color="initial" size='large' onClick={scrollToProjects}>
+											<ColorButton variant="contained" size='large' onClick={scrollToProjects}>
 												My Work
 											</ColorButton>
 										</Grid>

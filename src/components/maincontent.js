@@ -40,8 +40,6 @@ const MainContent = () => {
 		setData(Data.projects);
 	}, []);
 
-	
-	console.log(data);
 	return (
 		<Container fixed >
 			<Grid container className={classes.cardCon} direction="row" justify="center" alignContent="center">

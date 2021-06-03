@@ -7,7 +7,7 @@ import {
     Link,
     Grid
 } from "@material-ui/core";
-import scrollToProjects from './utils/effects.js';
+import scrollToProjects from '../utils/effects.js';
 
 const useStyles = makeStyles({
     navBar: {

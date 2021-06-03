@@ -101,9 +101,8 @@ const ProjectCards = (props) => {
     const handleClose = () => {
         setOpen(false);
     };
-    const handleExpandClick = (event) => {
-        console.log(event.target);
-            setExpanded(!expanded)
+    const handleExpandClick = () => {
+        setExpanded(!expanded)
     };  
 
     const squareImg = require('../images/' + project.image_urls[0] + '.jpg').default;
