@@ -26,7 +26,8 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: 'Caveat, cursive',
         fontSize: '27px',
         paddingRight: '10px',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        pointer: 'none'
     },
     modal: {
         width: '80%',

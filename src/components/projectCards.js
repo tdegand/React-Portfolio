@@ -122,7 +122,6 @@ const ProjectCards = (props) => {
                 </CardActions>
                 <Collapse in={expanded} timeout="auto" unmountOnExit>
                     <CardContent className={'expandedCon'}>
-                        <Typography paragraph>Method:</Typography>
                         <Typography paragraph>
                             {project.description}
                         </Typography>
