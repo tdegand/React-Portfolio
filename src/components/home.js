@@ -4,8 +4,10 @@ import {
 	CssBaseline,
 	Grid,
 	Typography,
+	Snackbar
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import MuiAlert from '@material-ui/lab/Alert';
 import NavBar from './nav';
 import MainContent from './maincontent';
 import About from './about';
@@ -50,9 +52,14 @@ const useStyles = makeStyles((theme) => ({
 	}
 }));
 
+const Alert = (props) => {
+	return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
+
 const Home = () => {
 	const classes = useStyles();
 	const [open, setOpen] = React.useState(false);
+	const [snackOpen, setSnackOpen] = React.useState(false);
 
 	const handleOpen = () => {
 		setOpen(true);
@@ -61,10 +68,22 @@ const Home = () => {
 		setOpen(false);
 	};
 
+	const handleSnack = () => {
+		setSnackOpen(true);
+	  };
+	
+	  const handleSnackClose = (event, reason) => {
+		if (reason === 'clickaway') {
+		  return;
+		}
+	
+		setSnackOpen(false);
+	  };
+
 	return (
 		<React.Fragment>
 			<CssBaseline />
-			<NavBar open={open} handleClose={handleClose} handleOpen={handleOpen} />
+			<NavBar open={open} handleClose={handleClose} handleOpen={handleOpen} handleSnack={handleSnack} />
 			<header>
 				{/* Hero unit */}
 				<div className={classes.header}>
@@ -110,6 +129,11 @@ const Home = () => {
 			<main className={classes.main}>
 				<About />
 				<MainContent />
+				<Snackbar open={snackOpen} autoHideDuration={6000} onClose={handleSnackClose} >
+					<Alert onClose={handleSnackClose} severity="success">
+					Your message has been sent successfully!
+					</Alert>
+				</Snackbar>
 			</main>
 			<Footer />
 		</React.Fragment>

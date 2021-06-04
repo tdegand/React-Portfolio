@@ -10,6 +10,7 @@ import {
 } from "@material-ui/core";
 import BackspaceIcon from '@material-ui/icons/Backspace';
 import SendIcon from '@material-ui/icons/Send';
+import axios from "axios";
 
 const useStyles = makeStyles((theme) => ({
     modal: {
@@ -21,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         justifyContent: 'center',
     },
-      paper: {
+    paper: {
         backgroundColor: "rgb(220,220,220)",
         border: '2px solid #000',
         boxShadow: theme.shadows[5],
@@ -37,24 +38,24 @@ const useStyles = makeStyles((theme) => ({
         margin: '10px',
         '& label.Mui-focused': {
             color: 'green',
-          },
-          '& .MuiOutlinedInput-root': {
+        },
+        '& .MuiOutlinedInput-root': {
             '&.Mui-focused fieldset': {
-              borderColor: 'green',
+                borderColor: 'green',
             },
-          },
+        },
     },
     inputMessage: {
         width: '85%',
         margin: '10px',
         '& label.Mui-focused': {
             color: 'green',
-          },
-          '& .MuiOutlinedInput-root': {
+        },
+        '& .MuiOutlinedInput-root': {
             '&.Mui-focused fieldset': {
-              borderColor: 'green',
+                borderColor: 'green',
             },
-          },
+        },
     },
     form: {
         position: 'relative',
@@ -74,52 +75,54 @@ const useStyles = makeStyles((theme) => ({
 
 const ContactModal = (props) => {
     const classes = useStyles();
-    const {handleClose, open } = props;
+    const { handleClose, handleSnack, open } = props
+    const [formStatus, setFormStatus] = React.useState(false);
+    const [query, setQuery] = React.useState({
+        first: '',
+        last: '',
+        email: '',
+        message: ''
+    });
 
-    const [first, setFirst] = React.useState('');
-    const [last, setLast] = React.useState('');
-    const [email, setEmail] = React.useState('');
-    const [message, setMessage] = React.useState('');
-    
-    const handlefirstChange = (event) => {
-        event.preventDefault();
-        const target = event.target;
-        const value = target.value;
-        const first = target.first;
+    const handleChange = (e) => {
+        const name = e.target.name;
+        const value = e.target.value;
+        setQuery((prevState) => ({
+          ...prevState,
+          [name]: value
+        }));
+      };
 
-        setFirst({ first: value });
-    }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const formData = new FormData();
+        Object.entries(query).forEach(([key, value]) => {
+            formData.append(key, value);
+        });
 
-    const handleLastChange = (event) => {
-        event.preventDefault();
-        const target = event.target;
-        const value = target.value;
-        const last = target.last;
-        
-        setLast({ last: value });
-    }
+        axios
+            .post(
+                "https://usebasin.com/f/af8a391ce0a6",
+                formData,
+                { headers: { Accept: "application/json" } }
+            )
+            .then(function (response) {
+                setFormStatus(true);
+                setQuery({
+                    first: '',
+                    last: '',
+                    email: '',
+                    message: ''
+                });
+                handleClose();
+                handleSnack();
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    };
 
-    const handleEmailChange = (event) => {
-        event.preventDefault();
-        const target = event.target;
-        const value = target.value;
-        const email= target.email;
-
-        setEmail({ email: value });
-    }
-
-    const handleMessageChange = (event) => {
-        event.preventDefault();
-        const target = event.target;
-        const value = target.value;
-        const message = target.message;
-
-        setMessage({ message: value });
-    }
-
-    console.log(first, last, email, message);
-
-    return(
+    return (
         <Modal
             aria-labelledby="transition-modal-title"
             aria-describedby="transition-modal-description"
@@ -129,65 +132,74 @@ const ContactModal = (props) => {
             closeAfterTransition
             BackdropComponent={Backdrop}
             BackdropProps={{
-            timeout: 500,
+                timeout: 500,
             }}
         >
             <Fade in={open}>
-            <div className={classes.paper}>
-                <IconButton className={classes.exitModal} color="inherit" onClick={handleClose}>
-                    <BackspaceIcon>Back</BackspaceIcon>
-                </IconButton>
-                <h2 id="transition-modal-title">Contact Me</h2>
-                <p id="transition-modal-description">Inquiring about a job or just have a question? Send me a message!</p>
-                <form className={classes.form} autoComplete="on">
-                    <TextField
-                        className={classes.input}
-                        required
-                        id="outlined-required"
-                        label="First Name"
-                        variant="outlined"
-                        type="text"
-                        onChange={handlefirstChange}
-                    />
-                    <TextField
-                        className={classes.input}
-                        required
-                        id="outlined-required"
-                        label="Last Name"
-                        variant="outlined"
-                        type="text"
-                        onChange={handleLastChange}
-                    />
-                    <TextField
-                        className={classes.input}
-                        required
-                        id="outlined-required"
-                        label="Email"
-                        variant="outlined"
-                        type="email"
-                        onChange={handleEmailChange}
-                    />
-                    <TextField
-                        className={classes.inputMessage}
-                        required
-                        id="outlined-required"
-                        label="Send a Message"
-                        variant="outlined"
-                        multiline
-                        rows={4}
-                        fullWidth
-                        type="text"
-                        onChange={handleMessageChange}
-                    />
-                    <Button
-                        className={classes.sendButton} 
-                        variant="contained"
-                        endIcon={<SendIcon />}
+                <div className={classes.paper}>
+                    <IconButton className={classes.exitModal} color="inherit" onClick={handleClose}>
+                        <BackspaceIcon>Back</BackspaceIcon>
+                    </IconButton>
+                    <h2 id="transition-modal-title">Contact Me</h2>
+                    <p id="transition-modal-description">Inquiring about a job or just have a question? Send me a message!</p>
+                    <form
+                        className={classes.form}
+                        autoComplete="on"
+                        onSubmit={handleSubmit}
                     >
-                        Send
+                        <TextField
+                            className={classes.input}
+                            required
+                            id="outlined-required"
+                            label="First Name"
+                            variant="outlined"
+                            type="text"
+                            name="first"
+                            onChange={handleChange}
+                        />
+                        <TextField
+                            className={classes.input}
+                            required
+                            id="outlined-required"
+                            label="Last Name"
+                            variant="outlined"
+                            type="text"
+                            name="last"
+                            onChange={handleChange}
+                        />
+                        <TextField
+                            className={classes.input}
+                            required
+                            id="outlined-required"
+                            label="Email"
+                            variant="outlined"
+                            type="email"
+                            name="email"
+                            onChange={handleChange}
+                        />
+                        <TextField
+                            className={classes.inputMessage}
+                            required
+                            id="outlined-required"
+                            label="Send a Message"
+                            variant="outlined"
+                            multiline
+                            rows={4}
+                            fullWidth
+                            type="text"
+                            name="message"
+                            onChange={handleChange}
+                        />
+                        <Button
+                            className={classes.sendButton}
+                            variant="contained"
+                            type="submit"
+                            endIcon={<SendIcon />}
+                        >
+                            Send
                     </Button>
-                </form>
-            </div>
+                    </form>
+                </div>
             </Fade>
         </Modal>
     );

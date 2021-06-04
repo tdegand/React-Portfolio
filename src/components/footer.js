@@ -53,19 +53,19 @@ const Footer = () => {
           <Grid container={true} direction='row' justify="center">
             <Grid item={true}>
               <IconButton href="https://www.linkedin.com/in/tyler-degand-21252bb9/" className={classes.textColor}>
-                <LinkedInIcon fontSize="medium" className={classes.icon}/>
+                <LinkedInIcon fontSize="small" className={classes.icon}/>
                 LinkedIn
               </IconButton>
             </Grid>
             <Grid item={true}>
               <IconButton href="https://github.com/tdegand" className={classes.textColor}>
-                <GitHubIcon fontSize="medium" className={classes.icon}/>
+                <GitHubIcon fontSize="small" className={classes.icon}/>
                 GitHub
               </IconButton>
             </Grid>
             <Grid item={true}>
               <IconButton href={PDF} target="_blank" className={classes.textColor}>
-                <DescriptionRoundedIcon fontSize="medium" className={classes.icon} />
+                <DescriptionRoundedIcon fontSize="small" className={classes.icon} />
                 Resume
               </IconButton>
             </Grid>

@@ -62,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Navbar = (props) => {
     const classes = useStyles();
-    const {handleClose, handleOpen, open } = props;  
+    const {handleClose, handleOpen, handleSnack, open } = props;  
 
     return(
         <AppBar position="absolute" className={classes.navBar} data-aos="fade-down" data-aos-duration="800">
@@ -82,7 +82,7 @@ const Navbar = (props) => {
                     </Grid>
                 </Grid>
             </Toolbar>
-            <ContactModal open={open} handleClose={handleClose}/>
+            <ContactModal open={open} handleClose={handleClose} handleSnack={handleSnack}/>
         </AppBar>
         
     );
