@@ -4,20 +4,20 @@ import { makeStyles } from "@material-ui/core/styles";
 
 
 const useStyles = makeStyles(() => ({
-    parentAbout: {
-        height: "fitContent",
-        paddingTop: '100px',
-        paddingBottom: '100px',
-    },
+	parentAbout: {
+		height: "fitContent",
+		paddingTop: '100px',
+		paddingBottom: '100px',
+	},
 	aboutMe: {
 		width: "80%",
-        minWidth: '345px',
-        maxWidth: '900px',
+		minWidth: '345px',
+		maxWidth: '900px',
 		margin: "auto",
 		fontFamily: "Caudex, serif",
 		fontWeight: "bold",
 		fontSize: "22px",
-        padding: '20px',
+		padding: '20px',
 		backgroundColor: 'rgba(220,220,220, 0.8)',
 		borderRadius: '25px',
 		boxShadow: '3px 4px 4px -3px #5d5d5d'
@@ -27,7 +27,7 @@ const useStyles = makeStyles(() => ({
 const About = () => {
 	const classes = useStyles();
 
-	
+
 
 	return (
 		<Grid container={true} className={classes.parentAbout}>

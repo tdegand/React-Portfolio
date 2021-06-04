@@ -5,9 +5,9 @@ import 'aos/dist/aos.css';
 
 const App = () => {
   React.useEffect(() => {
-		AOS.init();
+    AOS.init();
     document.title = "Tyler Degand"
-	}, []);
+  }, []);
 
   return (
     <div>

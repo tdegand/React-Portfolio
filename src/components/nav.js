@@ -1,9 +1,9 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import {
-	AppBar,
-	Toolbar,
-	Typography,
+    AppBar,
+    Toolbar,
+    Typography,
     Link,
     Grid,
 } from "@material-ui/core";
@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         justifyContent: 'center',
     },
-      paper: {
+    paper: {
         backgroundColor: "#ccc",
         border: '2px solid #000',
         boxShadow: theme.shadows[5],
@@ -62,15 +62,15 @@ const useStyles = makeStyles((theme) => ({
 
 const Navbar = (props) => {
     const classes = useStyles();
-    const {handleClose, handleOpen, handleSnack, open } = props;  
+    const { handleClose, handleOpen, handleSnack, open } = props;
 
-    return(
+    return (
         <AppBar position="absolute" className={classes.navBar} data-aos="fade-down" data-aos-duration="800">
             <Toolbar className={classes.toolBar}>
                 <Grid container={true} justify='space-between'>
                     <Grid item={true} className={classes.navLink}>
-                    <Typography className={classes.logo} variant="h4" color="inherit" noWrap >
-                        TD
+                        <Typography className={classes.logo} variant="h4" color="inherit" noWrap >
+                            TD
                     </Typography>
                     </Grid>
                     <Grid item={true}>
@@ -82,9 +82,9 @@ const Navbar = (props) => {
                     </Grid>
                 </Grid>
             </Toolbar>
-            <ContactModal open={open} handleClose={handleClose} handleSnack={handleSnack}/>
+            <ContactModal open={open} handleClose={handleClose} handleSnack={handleSnack} />
         </AppBar>
-        
+
     );
 }
 

@@ -88,10 +88,10 @@ const ContactModal = (props) => {
         const name = e.target.name;
         const value = e.target.value;
         setQuery((prevState) => ({
-          ...prevState,
-          [name]: value
+            ...prevState,
+            [name]: value
         }));
-      };
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault();

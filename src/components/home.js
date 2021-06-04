@@ -70,15 +70,15 @@ const Home = () => {
 
 	const handleSnack = () => {
 		setSnackOpen(true);
-	  };
-	
-	  const handleSnackClose = (event, reason) => {
+	};
+
+	const handleSnackClose = (event, reason) => {
 		if (reason === 'clickaway') {
-		  return;
+			return;
 		}
-	
+
 		setSnackOpen(false);
-	  };
+	};
 
 	return (
 		<React.Fragment>
@@ -131,7 +131,7 @@ const Home = () => {
 				<MainContent />
 				<Snackbar open={snackOpen} autoHideDuration={6000} onClose={handleSnackClose} >
 					<Alert onClose={handleSnackClose} severity="success">
-					Your message has been sent successfully!
+						Your message has been sent successfully!
 					</Alert>
 				</Snackbar>
 			</main>
