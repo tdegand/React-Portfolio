@@ -15,19 +15,19 @@ import axios from "axios";
 const useStyles = makeStyles((theme) => ({
     modal: {
         width: window.innerwidth,
-        maxWidth: '1100px',
+        maxWidth: '800px',
         margin: 'auto',
         display: 'flex',
-        alignItems: 'center',
         justifyContent: 'center',
     },
     paper: {
         backgroundColor: "rgb(220,220,220)",
         border: '2px solid #000',
         boxShadow: theme.shadows[5],
-        padding: theme.spacing(2, 4, 3),
+        padding: '10px 20px 20px',
         alignItems: 'center',
-        borderRadius: '15px'
+        borderRadius: '15px',
+        overflow: 'auto'
     },
     exitModal: {
         float: 'right'
