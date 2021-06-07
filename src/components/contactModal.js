@@ -14,9 +14,8 @@ import axios from "axios";
 
 const useStyles = makeStyles((theme) => ({
     modal: {
-        width: '80%',
+        width: window.innerwidth,
         maxWidth: '1100px',
-        minWidth: '350px',
         margin: 'auto',
         display: 'flex',
         alignItems: 'center',
@@ -65,6 +64,7 @@ const useStyles = makeStyles((theme) => ({
     sendButton: {
         position: 'absolute',
         bottom: 0,
+        right: '25px',
         backgroundColor: '#519872',
         color: 'white',
         "&:hover": {
