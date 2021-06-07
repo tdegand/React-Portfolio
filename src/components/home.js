@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	header: {
 		height: window.innerHeight,
+		minHeight: '700px',
 		backgroundImage: `url(${Image})`,
 		backgroundSize: 'cover',
 		backgroundRepeat: 'no-repeat',
@@ -41,15 +42,8 @@ const useStyles = makeStyles((theme) => ({
 	},
 	headerCon: {
 		height: '65%',
-		marginTop: '100px'
+		marginTop: '50px'
 	},
-	textBox: {
-		backgroundColor: 'rgba(220,220,220, 0.8)',
-		padding: '15px',
-		margin: '10px',
-		borderRadius: '25px',
-		border: 'solid 3px #3B5249'
-	}
 }));
 
 const Alert = (props) => {
@@ -90,9 +84,10 @@ const Home = () => {
 					{/* <Container maxWidth="sm" justify="start"> */}
 					<Grid container={true} justify='center' alignContent='space-between' className={classes.headerCon}>
 						<Grid container={true} justify='center'>
-							<img className={`headshot`} src={Headshot} alt="Tyler Degand" data-aos="fade-right" data-aos-offset="500" data-aos-duration="800"></img>
+							<img className={`headshot animate__animated animate__slideInRight animate__slow	1s`} src={Headshot} alt="Tyler Degand" ></img>
 						</Grid>
-						<Grid item={true} className={classes.textBox} data-aos="fade-left" data-aos-offset="300" data-aos-duration="800">
+						<Grid item={true} className={`textBox animate__animated animate__slideInLeft animate__slow 1s`} >
+							{/* data-aos="fade-left" data-aos-offset="300" data-aos-duration="800" */}
 							<Typography
 								className={classes.text}
 								component="h1"

@@ -42,8 +42,19 @@
 	width: 30%;
 	border-radius: 50px;
 	min-width: 150px;
-	max-width: 250px;
+	max-width: 225px;
 	border: solid 5px #34252F;
+}
+
+.textBox {
+	background-color: rgba(220,220,220, 0.8);
+	padding: 15px;
+	margin-top: 10px !important;
+	border-radius: 25px;
+	border: solid 3px #3B5249;
+	width: 65%;
+	min-width: 255px;
+	max-width: 600px;
 }
 
 /* css animations */

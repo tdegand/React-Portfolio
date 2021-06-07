@@ -1,6 +1,7 @@
 import React from 'react';
 import Home from './components/home';
 import AOS from 'aos';
+import 'animate.css'
 import 'aos/dist/aos.css';
 
 const App = () => {
