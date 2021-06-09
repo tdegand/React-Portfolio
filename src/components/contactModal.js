@@ -14,12 +14,10 @@ import axios from "axios";
 
 const useStyles = makeStyles((theme) => ({
     modal: {
-        width: window.innerwidth,
-        maxWidth: '800px',
-        margin: 'auto',
         display: 'flex',
+        alignItems: 'center',
         justifyContent: 'center',
-    },
+      },
     paper: {
         backgroundColor: "rgb(220,220,220)",
         border: '2px solid #000',

@@ -7,7 +7,6 @@ import {
     Link,
     Grid,
 } from "@material-ui/core";
-import { scrollToProjects, scrollToAbout } from '../utils/effects.js';
 import ContactModal from './contactModal';
 
 const useStyles = makeStyles((theme) => ({
@@ -62,22 +61,22 @@ const useStyles = makeStyles((theme) => ({
 
 const Navbar = (props) => {
     const classes = useStyles();
-    const { handleClose, handleOpen, handleSnack, open } = props;
+    const { handleClose, handleOpen, handleSnack, executeScroll, open } = props;
 
     return (
-        <AppBar position="absolute" className={classes.navBar} data-aos="fade-down" data-aos-duration="800">
+        <AppBar position="fixed" className={classes.navBar} data-aos="fade-down" data-aos-duration="800">
             <Toolbar className={classes.toolBar}>
                 <Grid container={true} justify='space-between'>
                     <Grid item={true} className={classes.navLink}>
-                        <Typography className={classes.logo} variant="h4" color="inherit" noWrap >
-                            TD
+                        <Typography variant="h4" color="inherit" noWrap >
+                            <Link id='top' className={'hvr-grow'} color="inherit" onClick={executeScroll}>TD</Link>
                     </Typography>
                     </Grid>
                     <Grid item={true}>
                         <Grid container={true} justify='space-between' className={classes.navContainer}>
-                            <Link className={'hvr-grow'} color="inherit" onClick={scrollToProjects}>Projects</Link>
-                            <Link href='#' className={'hvr-grow'} color="inherit" onClick={scrollToAbout}>About</Link>
-                            <Link href='#' className={'hvr-grow'} color="inherit" onClick={handleOpen}>Contact Me</Link>
+                            <Link id='about' className={'hvr-grow'} color="inherit" onClick={executeScroll}>About</Link>
+                            <Link id='projects' className={'hvr-grow'} color="inherit" onClick={executeScroll}>Projects</Link>
+                            <Link className={'hvr-grow'} color="inherit" onClick={handleOpen}>Contact Me</Link>
                         </Grid>
                     </Grid>
                 </Grid>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import {
 	Link,
 	CssBaseline,
@@ -13,9 +13,8 @@ import MainContent from './maincontent';
 import About from './about';
 import Footer from './footer';
 import Image from '../images/wood.jpg';
-import { scrollToProjects } from '../utils/effects.js';
 import Headshot from '../images/Tyler.jpg';
-import LazyLoad from 'react-lazy-load';
+
 
 const useStyles = makeStyles((theme) => ({
 	icon: {
@@ -53,6 +52,9 @@ const Alert = (props) => {
 
 const Home = () => {
 	const classes = useStyles();
+	const top = useRef(null);
+	const about = useRef(null);
+	const projects = useRef(null);
 	const [open, setOpen] = React.useState(false);
 	const [snackOpen, setSnackOpen] = React.useState(false);
 
@@ -75,20 +77,29 @@ const Home = () => {
 		setSnackOpen(false);
 	};
 
+	const executeScroll = (event) => {
+		console.log(event.target);
+		if(event.target.id === 'about') {
+			about.current.scrollIntoView();
+		} else if (event.target.id === 'projects') {
+			projects.current.scrollIntoView();
+		} else if (event.target.id === 'top') {
+			top.current.scrollIntoView();
+		}
+	}
+
 	return (
 		<React.Fragment>
 			<CssBaseline />
-			<NavBar open={open} handleClose={handleClose} handleOpen={handleOpen} handleSnack={handleSnack} />
+			<NavBar open={open} handleClose={handleClose} handleOpen={handleOpen} handleSnack={handleSnack} executeScroll={executeScroll} />
 			<header>
 				{/* Hero unit */}
-				<div className={classes.header}>
-					{/* <Container maxWidth="sm" justify="start"> */}
+				<div ref={top} className={classes.header}>
 					<Grid container={true} justify='center' alignContent='space-between' className={classes.headerCon}>
 						<Grid container={true} justify='center'>
 							<img className={`headshot animate__animated animate__slideInRight animate__slow	1s`} src={Headshot} alt="Tyler Degand" ></img>
 						</Grid>
 						<Grid item={true} className={`textBox animate__animated animate__slideInLeft animate__slow 1s`} >
-							{/* data-aos="fade-left" data-aos-offset="300" data-aos-duration="800" */}
 							<Typography
 								className={classes.text}
 								component="h1"
@@ -111,24 +122,19 @@ const Home = () => {
 							<div className={classes.headerButtons}>
 								<Grid container spacing={2} justify="center">
 									<Grid item>
-										<Link className={'hvr-float'} onClick={scrollToProjects}>
+										<Link id='projects' className={'hvr-float'} onClick={executeScroll}>
 											My Work
-											</Link>
+										</Link>
 									</Grid>
 								</Grid>
 							</div>
 						</Grid>
 					</Grid>
-					{/* </Container> */}
 				</div>
 			</header>
 			<main className={classes.main}>
-				<LazyLoad height={762} offsetVertical={300}>
-					<About />
-				</LazyLoad>
-				<LazyLoad offsetVertical={600}>
-					<MainContent />
-				</LazyLoad>
+				<About refProp={about} />
+				<MainContent refProp={projects} />
 				<Snackbar open={snackOpen} autoHideDuration={6000} onClose={handleSnackClose} >
 					<Alert onClose={handleSnackClose} severity="success">
 						Your message has been sent successfully!

@@ -6,8 +6,8 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles(() => ({
 	parentAbout: {
 		height: "fitContent",
-		paddingTop: '100px',
-		paddingBottom: '100px',
+		paddingTop: '200px',
+		paddingBottom: '250px',
 	},
 	aboutMe: {
 		width: "80%",
@@ -24,20 +24,19 @@ const useStyles = makeStyles(() => ({
 	},
 }));
 
-const About = () => {
+const About = (props) => {
 	const classes = useStyles();
 
-
-
 	return (
-		<Grid container={true} className={classes.parentAbout}>
+		<Grid ref={props.refProp} container={true} className={classes.parentAbout}>
 			<Grid
 				container={true}
 				className={classes.aboutMe}
 				justify="center"
 				alignContent="center"
 				data-aos="fade-right"
-				data-aos-duration="800"
+				data-aos-duration="1000"
+				data-aos-offset="500"
 			>
 				<Grid item={true}>
 					<p>

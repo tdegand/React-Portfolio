@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
 	}
 }));
 
-const MainContent = () => {
+const MainContent = (props) => {
 	const classes = useStyles();
 	const [data, setData] = React.useState({});
 
@@ -46,7 +46,7 @@ const MainContent = () => {
 	return (
 		<Container fixed >
 			<hr className={classes.break}></hr>
-			<Grid container className={classes.cardCon} direction="row" justify="center" alignContent="center" data-aos="fade-left" data-aos-duration="800">
+			<Grid ref={props.refProp} container className={classes.cardCon} direction="row" justify="center" alignContent="center" data-aos="fade-left" data-aos-duration="1000" data-aos-offset="500">
 				{_.map(data, project => {
 					return <ProjectCards key={project.id} project={project} />
 				})}
