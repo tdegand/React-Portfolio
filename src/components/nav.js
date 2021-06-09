@@ -10,10 +10,6 @@ import {
 import ContactModal from './contactModal';
 
 const useStyles = makeStyles((theme) => ({
-    navBar: {
-        backgroundColor: '#519872',
-        color: '#34252F'
-    },
     toolBar: {
         boxShadow: '0px 3px 5px 1px rgb(0 0 0 / 90%)'
     },
@@ -64,7 +60,7 @@ const Navbar = (props) => {
     const { handleClose, handleOpen, handleSnack, executeScroll, open } = props;
 
     return (
-        <AppBar position="fixed" className={classes.navBar} data-aos="fade-down" data-aos-duration="800">
+        <AppBar position="fixed" className={`navBar`} data-aos="fade-down" data-aos-duration="800">
             <Toolbar className={classes.toolBar}>
                 <Grid container={true} justify='space-between'>
                     <Grid item={true} className={classes.navLink}>

@@ -15,6 +15,12 @@
 	padding: 10px;
 }
 
+.navBar {
+	background-color: #519872 !important;
+    color: #34252F !important;
+	padding: 0 !important;
+}
+
 .cardButton {
 	position: absolute;
 	bottom: 15px;
