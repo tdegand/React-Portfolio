@@ -15,6 +15,7 @@ import Footer from './footer';
 import Image from '../images/wood.jpg';
 import { scrollToProjects } from '../utils/effects.js';
 import Headshot from '../images/Tyler.jpg';
+import LazyLoad from 'react-lazy-load';
 
 const useStyles = makeStyles((theme) => ({
 	icon: {
@@ -122,8 +123,12 @@ const Home = () => {
 				</div>
 			</header>
 			<main className={classes.main}>
-				<About />
-				<MainContent />
+				<LazyLoad height={762} offsetVertical={300}>
+					<About />
+				</LazyLoad>
+				<LazyLoad offsetVertical={600}>
+					<MainContent />
+				</LazyLoad>
 				<Snackbar open={snackOpen} autoHideDuration={6000} onClose={handleSnackClose} >
 					<Alert onClose={handleSnackClose} severity="success">
 						Your message has been sent successfully!
