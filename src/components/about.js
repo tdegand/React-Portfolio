@@ -18,9 +18,10 @@ const useStyles = makeStyles(() => ({
 		fontWeight: "bold",
 		fontSize: "22px",
 		padding: '20px',
-		backgroundColor: 'rgba(220,220,220, 0.8)',
+		backgroundColor: '#f9f9f9',
 		borderRadius: '25px',
-		boxShadow: '3px 4px 4px -3px #5d5d5d'
+		boxShadow: 'rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px'
+		
 	},
 }));
 

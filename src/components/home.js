@@ -12,7 +12,7 @@ import NavBar from './nav';
 import MainContent from './maincontent';
 import About from './about';
 import Footer from './footer';
-import Image from '../images/wood.jpg';
+import Image from '../images/dark-triangles.png';
 import Headshot from '../images/Tyler.jpg';
 
 
@@ -24,8 +24,6 @@ const useStyles = makeStyles((theme) => ({
 		height: window.innerHeight,
 		minHeight: '700px',
 		backgroundImage: `url(${Image})`,
-		backgroundSize: 'cover',
-		backgroundRepeat: 'no-repeat',
 		padding: theme.spacing(8, 0, 6),
 	},
 	headerButtons: {
@@ -33,11 +31,11 @@ const useStyles = makeStyles((theme) => ({
 	},
 	main: {
 		height: 'maxContent',
-		backgroundColor: '#a6ab9b',
-		boxShadow: 'inset 0px 0px 4px 3px rgb(0 0 0 / 80%)'
+		backgroundColor: '#2a5840',
+		boxShadow: 'rgb(0 0 0 / 30%) 0px 2px 4px 0px inset'
 	},
 	text: {
-		color: '#000000',
+		color: '#fff',
 		fontFamily: 'Source Sans Pro, sans-serif'
 	},
 	headerCon: {
@@ -97,9 +95,9 @@ const Home = () => {
 				<div ref={top} className={classes.header}>
 					<Grid container={true} justify='center' alignContent='space-between' className={classes.headerCon}>
 						<Grid container={true} justify='center'>
-							<img className={`headshot animate__animated animate__slideInRight animate__slow	1s`} src={Headshot} alt="Tyler Degand" ></img>
+							<img className={`headshot`} src={Headshot} alt="Tyler Degand" ></img>
 						</Grid>
-						<Grid item={true} className={`textBox animate__animated animate__slideInLeft animate__slow 1s`} >
+						<Grid item={true} className={`textBox`} >
 							<Typography
 								className={classes.text}
 								component="h1"
