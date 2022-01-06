@@ -48,8 +48,8 @@ const About = (props) => {
 						I'm a self-motivated Web Developer who adds a fresh perspective to
 						web-based products through development experience. I'm passionate,
 						hardworking and have a penchant for developing customized software that
-						factor in unique demands for accessibility, reachability and
-						security. I use my active knowledge of the current technology landscape to
+						factors in unique demands for accessibility, reachability and
+						security. My active knowledge of the current technology landscape allows me to use and
 						promote best practices in web design.
 					</p>
 				</Grid>
