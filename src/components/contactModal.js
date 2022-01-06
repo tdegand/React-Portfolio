@@ -25,7 +25,8 @@ const useStyles = makeStyles((theme) => ({
         padding: '10px 20px 20px',
         alignItems: 'center',
         borderRadius: '15px',
-        overflow: 'auto'
+        overflow: 'auto',
+        outline: 'none'
     },
     exitModal: {
         float: 'right'

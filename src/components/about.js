@@ -20,6 +20,9 @@ const useStyles = makeStyles(() => ({
 		textAlign: 'center',
 		padding: '20px',
 		color: '#fff',
+		'@media (max-width: 600px)' : {
+            fontSize: "16px",
+          }
 	},
 	headBox: {
 		marginTop: '35px'

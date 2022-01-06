@@ -15,7 +15,10 @@ const useStyles = makeStyles((theme) => ({
     },
     navContainer: {
         width: '350px',
-        padding: '5px'
+        padding: '5px',
+        '@media (max-width: 600px)' : {
+            width: '290px'
+          }
     },
     logo: {
         fontSize: '27px',

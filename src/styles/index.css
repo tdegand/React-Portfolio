@@ -1,18 +1,14 @@
 /* Font Families:
-    font-family: 'Caudex', serif;
-    font-family: 'Sigmar One', cursive; LINKS/BUTTONS
     font-family: 'Source Sans Pro', sans-serif;  HEADERS
 
 
 	font-family: 'Barlow', sans-serif;  PARAGRAPHS and other small text
 	font-family: 'Lato', sans-serif; Nav Links
-
-    for TD: font-family: 'Caveat', cursive;
+	font-family: 'Monoton', cursive; TD logo
 */
-@import url("https://fonts.googleapis.com/css2?family=Caudex&family=Sigmar+One&family=Source+Sans+Pro:ital,wght@1,700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,700&display=swap");
 
-@import url("hhttps://fonts.googleapis.com/css2?family=Barlow&family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Lato&family=Monoton&display=swap");
 
 /* Custom Styling */
 
@@ -70,7 +66,16 @@
     border-radius: 2%;
 }
 #top{
-	font-family: 'Caveat cursive';
+	font-family: 'Monoton', cursive;
+	font-size: 24px;
+}
+
+@media only screen and (max-width: 600px) {
+	.textBox {
+		border-left: none;
+		border-right: none;
+		border-radius: 0;
+	}
 }
 
 /* css animations */
