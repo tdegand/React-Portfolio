@@ -41,7 +41,7 @@ const About = (props) => {
 				alignContent="center"
 				data-aos="fade-right"
 				data-aos-duration="1000"
-				data-aos-offset="500"
+				data-aos-offset="200"
 			>
 				<Grid item={true}>
 					<p>
