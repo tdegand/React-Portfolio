@@ -45,11 +45,11 @@ const About = (props) => {
 			>
 				<Grid item={true}>
 					<p>
-						Self-motivated Web Developer who adds a fresh perspective to
-						web-based products through development experience. Passionate,
-						hardworking with penchant for developing customized interfaces that
+						I'm a self-motivated Web Developer who adds a fresh perspective to
+						web-based products through development experience. I'm passionate,
+						hardworking and have a penchant for developing customized software that
 						factor in unique demands for accessibility, reachability and
-						security. Uses active knowledge of current technology landscape to
+						security. I use my active knowledge of the current technology landscape to
 						promote best practices in web design.
 					</p>
 				</Grid>
@@ -57,7 +57,7 @@ const About = (props) => {
 					<p>
 						My path has been paved by my own perseverance and motivation to
 						learn new skills. I'm a self taught developer who currently works
-						full time as a developer. I will continue to pave my path and keep
+						full time in the industry. I will continue to pave my path and keep
 						learning and working towards becoming a better developer.
 					</p>
 				</Grid>
