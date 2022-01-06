@@ -18,11 +18,13 @@ const useStyles = makeStyles((theme) => ({
         padding: '5px'
     },
     logo: {
-        fontFamily: 'Caveat, cursive',
         fontSize: '27px',
         paddingRight: '10px',
         fontWeight: 'bold',
         pointer: 'none'
+    },
+    navLink: {
+        fontfamily: 'Lato, sans-serif'
     },
     modal: {
         width: '80%',
@@ -70,9 +72,9 @@ const Navbar = (props) => {
                     </Grid>
                     <Grid item={true}>
                         <Grid container={true} justify='space-between' className={classes.navContainer}>
-                            <Link id='about' className={'hvr-grow'} color="inherit" onClick={executeScroll}>About</Link>
-                            <Link id='projects' className={'hvr-grow'} color="inherit" onClick={executeScroll}>Projects</Link>
-                            <Link className={'hvr-grow'} color="inherit" onClick={handleOpen}>Contact Me</Link>
+                            <Link id='about' className={'hvr-grow navLink'} color="inherit" onClick={executeScroll}>About</Link>
+                            <Link id='projects' className={'hvr-grow navLink'} color="inherit" onClick={executeScroll}>Projects</Link>
+                            <Link className={'hvr-grow navLink'} color="inherit" onClick={handleOpen}>Contact Me</Link>
                         </Grid>
                     </Grid>
                 </Grid>

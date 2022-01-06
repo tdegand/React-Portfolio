@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
 		paddingBottom: '100px',
 	},
 	break: {
-		borderTop: '5px solid #34252F',
+		borderTop: '5px solid #fff',
 		borderRadius: '5px'
 	}
 }));

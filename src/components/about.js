@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import Headshot from '../images/Tyler.jpg';
 
 
 const useStyles = makeStyles(() => ({
@@ -14,15 +15,15 @@ const useStyles = makeStyles(() => ({
 		minWidth: '345px',
 		maxWidth: '900px',
 		margin: "auto",
-		fontFamily: "Caudex, serif",
-		fontWeight: "bold",
-		fontSize: "22px",
+		fontFamily: 'Barlow, sans-serif',
+		fontSize: "20px",
+		textAlign: 'center',
 		padding: '20px',
-		backgroundColor: '#f9f9f9',
-		borderRadius: '25px',
-		boxShadow: 'rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px'
-		
+		color: '#fff',
 	},
+	headBox: {
+		marginTop: '35px'
+	}
 }));
 
 const About = (props) => {
@@ -49,13 +50,16 @@ const About = (props) => {
 						promote best practices in web design.
 					</p>
 				</Grid>
-				<Grid item={true} className={classes.bottomText}>
+				<Grid item={true}>
 					<p>
 						My path has been paved by my own perseverance and motivation to
 						learn new skills. I'm a self taught developer who currently works
 						full time as a developer. I will continue to pave my path and keep
 						learning and working towards becoming a better developer.
 					</p>
+				</Grid>
+				<Grid container={true} justify='center' className={classes.headBox}>
+					<img className={`headshot`} src={Headshot} alt="Tyler Degand" ></img>
 				</Grid>
 			</Grid>
 		</Grid>

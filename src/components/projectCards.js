@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
         position: 'relative',
         width: 345,
         margin: '20px',
-        backgroundColor: '#f9f9f9',
+        backgroundColor: '#bfbfbf',
         borderRadius: '5px',
         border: 'none',
         boxShadow: 'rgb(17 17 26 / 10%) 0px 4px 16px, rgb(17 17 26 / 10%) 0px 8px 24px, rgb(17 17 26 / 10%) 0px 16px 56px',

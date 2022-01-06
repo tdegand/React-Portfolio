@@ -13,7 +13,7 @@ import MainContent from './maincontent';
 import About from './about';
 import Footer from './footer';
 import Image from '../images/dark-triangles.png';
-import Headshot from '../images/Tyler.jpg';
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -31,16 +31,28 @@ const useStyles = makeStyles((theme) => ({
 	},
 	main: {
 		height: 'maxContent',
-		backgroundColor: '#2a5840',
+		backgroundColor: '#1d3e2d',
 		boxShadow: 'rgb(0 0 0 / 30%) 0px 2px 4px 0px inset'
 	},
 	text: {
 		color: '#fff',
 		fontFamily: 'Source Sans Pro, sans-serif'
 	},
+	myName: {
+		color: '#519872',
+		fontFamily: 'Source Sans Pro, sans-serif',
+		fontSize: '75px'
+	},
+	myTitle:{
+		color: '#fff',
+		fontSize: '26px',
+		fontFamily: 'Source Sans Pro, sans-serif'
+	},
 	headerCon: {
 		height: '65%',
-		marginTop: '50px'
+		marginTop: '50px',
+		display: 'flex',
+		alignContent: 'center'
 	},
 }));
 
@@ -94,22 +106,28 @@ const Home = () => {
 				{/* Hero unit */}
 				<div ref={top} className={classes.header}>
 					<Grid container={true} justify='center' alignContent='space-between' className={classes.headerCon}>
-						<Grid container={true} justify='center'>
-							<img className={`headshot`} src={Headshot} alt="Tyler Degand" ></img>
-						</Grid>
 						<Grid item={true} className={`textBox`} >
 							<Typography
 								className={classes.text}
+								component="p"
+								align="center"
+								color="initial"
+								gutterBottom
+							>
+								Hi my name is
+							</Typography>
+							<Typography
+								className={classes.myName}
 								component="h1"
 								variant="h3"
 								align="center"
 								color="initial"
 								gutterBottom
 							>
-								I'm Tyler Degand
-								</Typography>
+								Tyler Degand
+							</Typography>
 							<Typography
-								className={classes.text}
+								className={classes.myTitle}
 								variant="h4"
 								align="center"
 								color="textSecondary"

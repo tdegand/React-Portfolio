@@ -1,12 +1,18 @@
 /* Font Families:
-    font-family: 'Caudex', serif; PARAGRAPHS and other small text
+    font-family: 'Caudex', serif;
     font-family: 'Sigmar One', cursive; LINKS/BUTTONS
     font-family: 'Source Sans Pro', sans-serif;  HEADERS
+
+
+	font-family: 'Barlow', sans-serif;  PARAGRAPHS and other small text
+	font-family: 'Lato', sans-serif; Nav Links
 
     for TD: font-family: 'Caveat', cursive;
 */
 @import url("https://fonts.googleapis.com/css2?family=Caudex&family=Sigmar+One&family=Source+Sans+Pro:ital,wght@1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+
+@import url("hhttps://fonts.googleapis.com/css2?family=Barlow&family=Lato&display=swap");
 
 /* Custom Styling */
 
@@ -49,7 +55,8 @@
 	border-radius: 50px;
 	min-width: 150px;
 	max-width: 225px;
-	border: solid 5px #34252F;
+	outline: solid 2px white;
+	outline-offset: 10px;
 }
 
 .textBox {
@@ -58,6 +65,12 @@
 	width: 65%;
 	min-width: 255px;
 	max-width: 600px;
+	border-left: solid 2px #fff;
+    border-right: solid 2px #FFF;
+    border-radius: 2%;
+}
+#top{
+	font-family: 'Caveat cursive';
 }
 
 /* css animations */
@@ -75,7 +88,6 @@
 	transition-property: transform;
 	padding: 5px;
 	cursor: pointer;
-	font-family: "Sigmar One", cursive;
 	font-size: 16px;
 }
 .hvr-grow:hover,
@@ -106,7 +118,7 @@
 	letter-spacing: 1.5px;
 	padding: 10px 25px;
 	border-radius: 5px;
-	font-family: "Caudex", serif;
+	font-family: 'Lato', sans-serif;
 	cursor: pointer;
 }
 .hvr-float:hover,
