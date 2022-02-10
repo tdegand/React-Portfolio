@@ -133,7 +133,7 @@ const Home = () => {
 								color="textSecondary"
 								paragraph
 							>
-								Full Stack Web Developer
+								Full Stack Software Engineer
 								</Typography>
 							<div className={classes.headerButtons}>
 								<Grid container spacing={2} justify="center">

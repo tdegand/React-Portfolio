@@ -45,7 +45,7 @@ const About = (props) => {
 			>
 				<Grid item={true}>
 					<p>
-						I'm a self-motivated Web Developer who adds a fresh perspective to
+						I'm a self-motivated Software Engineer who adds a fresh perspective to
 						web-based products through development experience. I'm passionate,
 						hardworking and have a penchant for developing customized software that
 						factors in unique demands for accessibility, reachability and
