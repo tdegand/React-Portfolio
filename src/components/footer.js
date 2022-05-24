@@ -6,7 +6,7 @@ import {
   Grid
 } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
-import PDF from '../documents/Tyler-Degand-webdev-resume.pdf';
+import PDF from '../documents/My-Resume.pdf';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import DescriptionRoundedIcon from '@material-ui/icons/DescriptionRounded';
