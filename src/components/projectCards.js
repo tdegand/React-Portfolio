@@ -95,9 +95,9 @@ const ProjectCards = (props) => {
         setExpanded(!expanded)
     };
 
-    const squareImg = require('../images/' + project.image_urls[0] + '.jpg').default;
-    const img1 = require('../images/' + project.image_urls[1] + '.jpg').default;
-    const img2 = require('../images/' + project.image_urls[2] + '.jpg').default;
+    const squareImg = require('../images/' + project.image_urls[0] + '.jpg');
+    const img1 = require('../images/' + project.image_urls[1] + '.jpg');
+    const img2 = require('../images/' + project.image_urls[2] + '.jpg');
 
     return (
         <Grid>
